@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for a PopFusion account to access personalized music content.">
+    <meta name="keywords" content="register, PopFusion, music, account">
+    <meta property="og:title" content="PopFusion - Register">
+    <meta property="og:description" content="Create an account on PopFusion for exclusive music and playlists.">
+    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
     <title>PopFusion - Register</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="data.js"></script>
-    <script src="search.js"></script>
-    <script src="menu.js"></script>
+    <link rel="stylesheet" href="styles.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <script defer src="config.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="search.js"></script>
+    <script defer src="menu.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="shared.js"></script>
 </head>
-<body>
-    <header>
+<body class="dark-mode">
+    <header class="sticky-header">
         <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, and Share</div>
         <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+            <button class="search-button" aria-label="Submit search">Search</button>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
+        <nav role="navigation">
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+            <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
             <div class="auth-buttons">
                 <button class="sign-in"><a href="login.html">Sign In</a></button>
                 <button class="register"><a href="register.html">Register</a></button>
             </div>
             <div class="menu">
-                <button class="close-button">✕</button>
+                <button class="close-button" aria-label="Close menu">✕</button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="pop.html">Pop</a></li>
@@ -39,28 +48,36 @@
             </div>
         </nav>
     </header>
-
     <main>
-        <section class="register-container">
-            <h2>Register</h2>
-            <form class="register-form">
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit" class="register-button">Register</button>
-                <p>Already have an account? <a href="login.html">Sign In</a></p>
+        <section class="auth-container">
+            <h1>Register</h1>
+            <p>Create an account to access exclusive music content and personalized playlists.</p>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" aria-label="Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" aria-label="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" aria-label="Password" required>
+                </div>
+                <button class="register-button" type="submit">Register</button>
             </form>
         </section>
     </main>
-
     <footer>
         <div class="footer-content">
-            <div class="slogan">The Ultimate Music Experience</div>
+            <div class="slogan">Your Music, Your Vibe</div>
             <p>© 2025 PopFusion. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
+                <a href="https://facebook.com" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
         <div class="footer-links">
