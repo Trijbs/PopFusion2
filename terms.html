@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PopFusion - Terms of Service</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="data.js"></script>
     <script src="search.js"></script>
     <script src="menu.js"></script>
 </head>
-<body>
+<body data-theme="dark">
     <header>
         <div class="logo">PopFusion</div>
         <div class="tagline">Discover, Stream, and Share</div>
         <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+            <input type="text" id="search-input" placeholder="Search for artists, songs, albums..." aria-label="Search">
+            <button class="search-button" aria-label="Submit search">Search</button>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
+        <nav role="navigation">
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
             <div class="auth-buttons">
                 <button class="sign-in"><a href="login.html">Sign In</a></button>
                 <button class="register"><a href="register.html">Register</a></button>
             </div>
             <div class="menu">
-                <button class="close-button">✕</button>
+                <button class="close-button" aria-label="Close menu">✕</button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="top100.html">Top 100</a></li>
+                    <li><a href="top-100.html">Top 100</a></li>
                     <li><a href="spotify.html">Spotify Playlists</a></li>
                     <li><a href="discover.html">Discover</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -36,23 +37,32 @@
         </nav>
     </header>
     <main>
-        <section class="terms-container">
-            <h2>Terms of Service</h2>
+        <section class="terms-container" role="region" aria-labelledby="terms-heading">
+            <h2 id="terms-heading">Terms of Service</h2>
+            <nav class="toc">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                </ul>
+            </nav>
             <div class="terms-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3 id="introduction">Introduction</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3 id="usage">Usage</h3>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-content">
             <div class="slogan">The Ultimate Music Experience</div>
             <p>© 2025 PopFusion. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
+                <a href="https://facebook.com/PopFusion" rel="noopener noreferrer" aria-label="PopFusion on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/PopFusion" rel="noopener noreferrer" aria-label="PopFusion on Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/PopFusion" rel="noopener noreferrer" aria-label="PopFusion on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@PopFusion" rel="noopener noreferrer" aria-label="PopFusion on TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
         <div class="footer-links">
