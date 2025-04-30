@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the Top 100 Artists of the Week on PopFusion, ranked by Billboard Artist 100. Explore music trends and artist profiles.">
+    <title>Top 100 Artists - PopFusion</title>
+    <link rel="stylesheet" href="styles.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "PopFusion",
+        "url": "https://popfusion.com",
+        "sameAs": [
+            "https://facebook.com",
+            "https://twitter.com",
+            "https://instagram.com",
+            "https://tiktok.com"
+        ]
+    }
+    </script>
+</head>
+<body data-theme="dark">
+    <header class="sticky-header">
+        <div class="logo">PopFusion</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search artists, songs..." aria-label="Search">
+            <button class="search-button">Search</button>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="menu">
+            <button class="close-button" aria-label="Close menu">✕</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spotify.html">Spotify</a></li>
+                <li><a href="pop.html">Pop</a></li>
+                <li><a href="hip-hop.html">Hip-Hop</a></li>
+                <li><a href="rock.html">Rock</a></li>
+                <li><a href="electronic.html">Electronic</a></li>
+                <li><a href="billboard.html">Billboard</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
+        <div class="user-profile">
+            <button aria-label="User profile">Profile</button>
+            <div class="dropdown-menu">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+    <main class="top-100-container">
+        <h1>Top 100 Artists This Week</h1>
+        <div class="top-100-grid" role="list"></div>
+        <button class="load-more" aria-label="Load more artists">Load More</button>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="slogan">Your Music, Your Vibe</div>
+            <p>© 2025 PopFusion. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://facebook.com" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="help.html">Help</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by PopFusion</p>
+            <p>Version 1.0.0</p>
+        </div>
+        <div class="footer-credits">
+            <p>Designed by Ruben</p>
+        </div>
+    </footer>
+    <script>
+        const artists = [
+            { rank: 1, name: "Morgan Wallen", image: "https://via.placeholder.com/250?text=Morgan+Wallen" },
+            { rank: 2, name: "Kendrick Lamar", image: "https://via.placeholder.com/250?text=Kendrick+Lamar" },
+            { rank: 3, name: "Sabrina Carpenter", image: "https://via.placeholder.com/250?text=Sabrina+Carpenter" },
+            { rank: 4, name: "SZA", image: "https://via.placeholder.com/250?text=SZA" },
+            { rank: 5, name: "Doechii", image: "https://via.placeholder.com/250?text=Doechii" },
+            { rank: 6, name: "Chappell Roan", image: "https://via.placeholder.com/250?text=Chappell+Roan" },
+            { rank: 7, name: "Lady Gaga", image: "https://via.placeholder.com/250?text=Lady+Gaga" },
+            { rank: 8, name: "Teddy Swims", image: "https://via.placeholder.com/250?text=Teddy+Swims" },
+            { rank: 9, name: "Billie Eilish", image: "https://via.placeholder.com/250?text=Billie+Eilish" },
+            { rank: 10, name: "Taylor Swift", image: "https://via.placeholder.com/250?text=Taylor+Swift" },
+            // Placeholder data for ranks 11-100
+            ...Array.from({ length: 90 }, (_, i) => ({
+                rank: i + 11,
+                name: `Artist ${i + 11}`,
+                image: `https://via.placeholder.com/250?text=Artist+${i + 11}`
+            }))
+        ];
+
+        const grid = document.querySelector('.top-100-grid');
+        const loadMoreBtn = document.querySelector('.load-more');
+        let visibleArtists = 10;
+
+        function renderArtists(start, count) {
+            const fragment = document.createDocumentFragment();
+            artists.slice(start, start + count).forEach(artist => {
+                const card = document.createElement('div');
+                card.className = 'artist-card';
+                card.setAttribute('role', 'listitem');
+                card.innerHTML = `
+                    <img src="${artist.image}" alt="${artist.name}" loading="lazy">
+                    <div class="card-details">
+                        <h3>#${artist.rank} ${artist.name}</h3>
+                        <a href="#" class="play-preview">View Profile</a>
+                    </div>
+                `;
+                fragment.appendChild(card);
+            });
+            grid.appendChild(fragment);
+        }
+
+        function loadMoreArtists() {
+            renderArtists(visibleArtists, 10);
+            visibleArtists += 10;
+            if (visibleArtists >= artists.length) {
+                loadMoreBtn.disabled = true;
+                loadMoreBtn.textContent = 'No More Artists';
+            }
+        }
+
+        // Initial render
+        renderArtists(0, visibleArtists);
+        loadMoreBtn.addEventListener('click', loadMoreArtists);
+
+        // Dark/Light mode toggle
+        const modeToggle = document.querySelector('.mode-toggle');
+        modeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            document.body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            modeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        });
+
+        // Menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        const closeButton = document.querySelector('.close-button');
+        menuToggle.addEventListener('click', () => menu.classList.toggle('active'));
+        closeButton.addEventListener('click', () => menu.classList.remove('active'));
+
+        // Dropdown menu
+        const profileButton = document.querySelector('.user-profile button');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        profileButton.addEventListener('click', () => dropdownMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>

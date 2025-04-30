@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PopFusion: Your go-to music hub for trending charts, artist news, and curated playlists for young adults.">
+    <meta name="keywords" content="music, charts, artists, playlists, PopFusion, trending, young adults">
+    <meta property="og:title" content="PopFusion - Music & Culture Hub">
+    <meta property="og:description" content="Discover the latest music trends, charts, and playlists with PopFusion, designed for young adults.">
+    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
+    <title>PopFusion - Music & Culture Hub</title>
+    <link rel="stylesheet" href="styles.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <script defer src="config.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="search.js"></script>
+    <script defer src="menu.js"></script>
+    <script defer src="home.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="shared.js"></script>
+</head>
+<body class="dark-mode">
+    <header class="sticky-header">
+        <div class="logo">PopFusion</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search artists, songs, news..." aria-label="Search">
+            <button class="search-button" aria-label="Submit search">Search</button>
+        </div>
+        <nav role="navigation">
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+            <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
+            <div class="auth-buttons">
+                <button class="sign-in"><a href="login.html">Sign In</a></button>
+                <button class="register"><a href="register.html">Register</a></button>
+            </div>
+            <div class="menu">
+                <button class="close-button" aria-label="Close menu">✕</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="top100.html">Top 100</a></li>
+                    <li><a href="spotify.html">Spotify Playlists</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-carousel" aria-label="Featured content">
+            <div class="carousel-container">
+                <div class="carousel-item active">
+                    <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg" alt="Artist Spotlight" loading="lazy">
+                    <div class="carousel-text">
+                        <h2>Artist Spotlight: Rising Star</h2>
+                        <p>Discover the new face of pop music.</p>
+                        <a href="#" class="cta-button">Read More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg" alt="New Release" loading="lazy">
+                    <div class="carousel-text">
+                        <h2>New Album Drop</h2>
+                        <p>Stream the hottest release of the week.</p>
+                        <a href="#" class="cta-button">Listen Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video src="https://example.com/short-clip.mp4" muted loop playsinline loading="lazy"></video>
+                    <div class="carousel-text">
+                        <h2>Trending on TikTok</h2>
+                        <p>Viral hits you need to hear.</p>
+                        <a href="#" class="cta-button">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-prev" aria-label="Previous slide">❮</button>
+            <button class="carousel-next" aria-label="Next slide">❯</button>
+        </section>
+
+        <section class="trending-charts">
+            <h2>Trending Charts</h2>
+            <div class="charts-grid">
+                <article class="chart-card">
+                    <img src="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg" alt="Top Song" loading="lazy">
+                    <div class="card-details">
+                        <h3>#1 Song</h3>
+                        <p>Artist: Star Performer</p>
+                        <a href="#" class="listen-now">Listen Now</a>
+                        <div class="card-actions">
+                            <button class="share-button" data-share="twitter" data-title="#1 Song">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="#1 Song">Share on TikTok</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="chart-card">
+                    <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg" alt="Top Album" loading="lazy">
+                    <div class="card-details">
+                        <h3>#1 Album</h3>
+                        <p>Artist: Music Icon</p>
+                        <a href="#" class="listen-now">Listen Now</a>
+                        <div class="card-actions">
+                            <button class="share-button" data-share="twitter" data-title="#1 Album">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="#1 Album">Share on TikTok</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="infinite-spinner"></div>
+        </section>
+
+        <section class="featured-artists">
+            <h2>Featured Artists</h2>
+            <div class="artists-grid">
+                <article class="artist-card">
+                    <img src="https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg" alt="Artist 1" loading="lazy">
+                    <h3>Artist 1</h3>
+                    <p>Genre: Pop</p>
+                    <button class="follow-button">Follow</button>
+                    <div class="card-actions">
+                        <button class="share-button" data-share="twitter" data-title="Artist 1">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="Artist 1">Share on TikTok</button>
+                    </div>
+                </article>
+                <article class="artist-card">
+                    <img src="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg" alt="Artist 2" loading="lazy">
+                    <h3>Artist 2</h3>
+                    <p>Genre: Hip-Hop</p>
+                    <button class="follow-button">Follow</button>
+                    <div class="card-actions">
+                        <button class="share-button" data-share="twitter" data-title="Artist 2">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="Artist 2">Share on TikTok</button>
+                    </div>
+                </article>
+            </div>
+            <div class="infinite-spinner"></div>
+        </section>
+
+        <section class="news-feed">
+            <h2>Latest News</h2>
+            <div class="news-grid">
+                <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle">
+                    <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg" alt="News 1" loading="lazy">
+                    <div class="card-details">
+                        <h3 itemprop="headline">Concert Tour Announced</h3>
+                        <p itemprop="description">Get tickets for the biggest tour of 2025.</p>
+                        <meta itemprop="datePublished" content="2025-04-30">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="card-actions">
+                            <button class="share-button" data-share="twitter" data-title="Concert Tour Announced">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="Concert Tour Announced">Share on TikTok</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle">
+                    <img src="https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg" alt="News 2" loading="lazy">
+                    <div class="card-details">
+                        <h3 itemprop="headline">Award Show Highlights</h3>
+                        <p itemprop="description">Recap of last night’s music awards.</p>
+                        <meta itemprop="datePublished" content="2025-04-30">
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="card-actions">
+                            <button class="share-button" data-share="twitter" data-title="Award Show Highlights">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="Award Show Highlights">Share on TikTok</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="infinite-spinner"></div>
+        </section>
+
+        <section class="social-trending">
+            <h2>Trending on Social</h2>
+            <div class="social-grid">
+                <div class="social-card">
+                    <video src="https://example.com/tiktok-clip.mp4" muted loop playsinline loading="lazy"></video>
+                    <p>#MusicVibes</p>
+                    <div class="card-actions">
+                        <button class="share-button" data-share="twitter" data-title="#MusicVibes">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="#MusicVibes">Share on TikTok</button>
+                    </div>
+                </div>
+                <div class="social-card">
+                    <img src="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg" alt="Instagram Post" loading="lazy">
+                    <p>#NewRelease</p>
+                    <div class="card-actions">
+                        <button class="share-button" data-share="twitter" data-title="#NewRelease">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="#NewRelease">Share on TikTok</button>
+                    </div>
+                </div>
+            </div>
+            <div class="infinite-spinner"></div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Join the Vibe</h2>
+            <p>Subscribe for the latest music news and exclusive playlists.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" aria-label="Email address">
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+        </section>
+    </main>
+
+    <aside class="music-player">
+        <h3>Now Playing</h3>
+        <p>Song: Sample Track</p>
+        <p>Artist: Sample Artist</p>
+        <button class="play-pause" aria-label="Play or pause track">▶</button>
+    </aside>
+
+    <footer>
+        <div class="footer-content">
+            <div class="slogan">Your Music, Your Vibe</div>
+            <p>© 2025 PopFusion. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://facebook.com" rel="noopener noreferrer">Facebook</a>
+                <a href="https://twitter.com" rel="noopener noreferrer">Twitter</a>
+                <a href="https://instagram.com" rel="noopener noreferrer">Instagram</a>
+                <a href="https://tiktok.com" rel="noopener noreferrer">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="help.html">Help</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by PopFusion</p>
+            <p>Version 1.0.0</p>
+        </div>
+        <div class="footer-credits">
+            <p>Designed by Ruben</p>
+        </div>
+    </footer>
+</body>
+</html>
