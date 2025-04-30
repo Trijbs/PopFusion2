@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PopFusion - Latest News</title>
     <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="data.js"></script>
     <script src="search.js"></script>
     <script src="menu.js"></script>
 </head>
-<body>
+<body data-theme="dark">
     <header>
         <div class="logo">PopFusion</div>
         <div class="tagline">Discover, Stream, and Share</div>
         <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+            <input type="text" id="search-input" placeholder="Search for artists, songs, albums..." aria-label="Search">
+            <button class="search-button" aria-label="Submit search">Search</button>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
+        <nav role="navigation">
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
             <div class="auth-buttons">
                 <button class="sign-in"><a href="login.html">Sign In</a></button>
                 <button class="register"><a href="register.html">Register</a></button>
             </div>
             <div class="menu">
-                <button class="close-button">✕</button>
+                <button class="close-button" aria-label="Close menu">✕</button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="top100.html">Top 100</a></li>
+                    <li><a href="top-100.html">Top 100</a></li>
                     <li><a href="spotify.html">Spotify Playlists</a></li>
                     <li><a href="discover.html">Discover</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -35,22 +36,21 @@
             </div>
         </nav>
     </header>
-
     <main>
         <section class="news-container">
             <h2>Latest Music News</h2>
-            <div class="news-list">
-                <div class="news-item">
+            <div class="news-list" role="list">
+                <div class="news-item" role="listitem">
                     <h3>New Album Release</h3>
                     <p>Artist X drops their highly anticipated album this week.</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
-                <div class="news-item">
+                <div class="news-item" role="listitem">
                     <h3>Concert Tour Announced</h3>
                     <p>Band Y schedules a global tour for 2025.</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
-                <div class="news-item">
+                <div class="news-item" role="listitem">
                     <h3>Award Show Highlights</h3>
                     <p>Recap of the latest music awards ceremony.</p>
                     <a href="#" class="read-more">Read More</a>
@@ -58,15 +58,15 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-content">
             <div class="slogan">The Ultimate Music Experience</div>
             <p>© 2025 PopFusion. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
+                <a href="https://facebook.com" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
             </div>
         </div>
         <div class="footer-links">
