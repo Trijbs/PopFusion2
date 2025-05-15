@@ -11,7 +11,6 @@
     <title>PopFusion - Music & Culture Hub</title>
     <link rel="stylesheet" href="styles.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="config.js"></script>
     <script defer src="data.js"></script>
     <script defer src="search.js"></script>
@@ -20,7 +19,7 @@
     <script defer src="analytics.js"></script>
     <script defer src="shared.js"></script>
 </head>
-<body data-theme="dark">
+<body class="dark-mode">
     <header class="sticky-header">
         <div class="logo">PopFusion</div>
         <div class="search-bar">
@@ -31,14 +30,14 @@
             <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
             <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
             <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html" aria-label="Sign in to your account">Sign In</a></button>
-                <button class="register"><a href="register.html" aria-label="Register for a new account">Register</a></button>
+                <button class="sign-in"><a href="login.html">Sign In</a></button>
+                <button class="register"><a href="register.html">Register</a></button>
             </div>
             <div class="menu">
                 <button class="close-button" aria-label="Close menu">✕</button>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="top-100.html">Top 100</a></li>
+                    <li><a href="top100.html">Top 100</a></li>
                     <li><a href="spotify.html">Spotify Playlists</a></li>
                     <li><a href="discover.html">Discover</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -55,7 +54,7 @@
                     <div class="carousel-text">
                         <h2>Artist Spotlight: Rising Star</h2>
                         <p>Discover the new face of pop music.</p>
-                        <a href="article.html?id=rising-star" class="cta-button" aria-label="Read more about Rising Star">Read More</a>
+                        <a href="#" class="cta-button">Read More</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -63,7 +62,7 @@
                     <div class="carousel-text">
                         <h2>New Album Drop</h2>
                         <p>Stream the hottest release of the week.</p>
-                        <a href="spotify.html" class="cta-button" aria-label="Listen to the new album on Spotify">Listen Now</a>
+                        <a href="#" class="cta-button">Listen Now</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -71,7 +70,7 @@
                     <div class="carousel-text">
                         <h2>Trending on TikTok</h2>
                         <p>Viral hits you need to hear.</p>
-                        <a href="social.html" class="cta-button" aria-label="Watch trending TikTok videos">Watch Now</a>
+                        <a href="#" class="cta-button">Watch Now</a>
                     </div>
                 </div>
             </div>
@@ -87,10 +86,10 @@
                     <div class="card-details">
                         <h3>#1 Song</h3>
                         <p>Artist: Star Performer</p>
-                        <a href="spotify.html" class="listen-now" aria-label="Listen to #1 Song on Spotify">Listen Now</a>
+                        <a href="#" class="listen-now">Listen Now</a>
                         <div class="card-actions">
-                            <button class="share-button" data-share="twitter" data-title="#1 Song by Star Performer" aria-label="Share #1 Song on Twitter">Share on Twitter</button>
-                            <button class="share-button" data-share="tiktok" data-title="#1 Song by Star Performer" aria-label="Share #1 Song on TikTok">Share on TikTok</button>
+                            <button class="share-button" data-share="twitter" data-title="#1 Song">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="#1 Song">Share on TikTok</button>
                         </div>
                     </div>
                 </article>
@@ -99,17 +98,63 @@
                     <div class="card-details">
                         <h3>#1 Album</h3>
                         <p>Artist: Music Icon</p>
-                        <a href="spotify.html" class="listen-now" aria-label="Listen to #1 Album on Spotify">Listen Now</a>
+                        <a href="#" class="listen-now">Listen Now</a>
                         <div class="card-actions">
-                            <button class="share-button" data-share="twitter" data-title="#1 Album by Music Icon" aria-label="Share #1 Album on Twitter">Share on Twitter</button>
-                            <button class="share-button" data-share="tiktok" data-title="#1 Album by Music Icon" aria-label="Share #1 Album on TikTok">Share on TikTok</button>
+                            <button class="share-button" data-share="twitter" data-title="#1 Album">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="#1 Album">Share on TikTok</button>
                         </div>
                     </div>
                 </article>
             </div>
             <div class="infinite-spinner"></div>
         </section>
+    </section>
 
+    <!-- Festival Promotie Sectie -->
+    <section class="festival-promo">
+        <div class="festival-content">
+            <div class="festival-text">
+                <h2>PopFusion Festival 2025</h2>
+                <p class="festival-date">12-14 JULI 2025</p>
+                <p class="festival-description">Het grootste pop muziekfestival van het jaar! Drie dagen vol muziek, kunst en onvergetelijke momenten.</p>
+                <div class="festival-features">
+                    <div class="feature">
+                        <span class="feature-icon">🎵</span>
+                        <p>50+ Artiesten</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🎪</span>
+                        <p>5 Podia</p>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🎨</span>
+                        <p>Kunst & Cultuur</p>
+                    </div>
+                </div>
+                <div class="festival-cta">
+                    <a href="#" class="ticket-button">Koop Tickets</a>
+                    <a href="#" class="app-button">Download de App</a>
+                </div>
+            </div>
+            <div class="festival-countdown">
+                <div class="countdown-item">
+                    <span class="count" id="days">00</span>
+                    <span class="label">Dagen</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="count" id="hours">00</span>
+                    <span class="label">Uren</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="count" id="minutes">00</span>
+                    <span class="label">Minuten</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end festival-promo -->
+    
+    <section class="trending-charts">
         <section class="featured-artists">
             <h2>Featured Artists</h2>
             <div class="artists-grid">
@@ -117,20 +162,20 @@
                     <img src="https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg" alt="Artist 1" loading="lazy">
                     <h3>Artist 1</h3>
                     <p>Genre: Pop</p>
-                    <a href="artist.html?id=artist1" class="follow-button" aria-label="Follow Artist 1">Follow</a>
+                    <button class="follow-button">Follow</button>
                     <div class="card-actions">
-                        <button class="share-button" data-share="twitter" data-title="Artist 1 - Pop Sensation" aria-label="Share Artist 1 on Twitter">Share on Twitter</button>
-                        <button class="share-button" data-share="tiktok" data-title="Artist 1 - Pop Sensation" aria-label="Share Artist 1 on TikTok">Share on TikTok</button>
+                        <button class="share-button" data-share="twitter" data-title="Artist 1">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="Artist 1">Share on TikTok</button>
                     </div>
                 </article>
                 <article class="artist-card">
                     <img src="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg" alt="Artist 2" loading="lazy">
                     <h3>Artist 2</h3>
                     <p>Genre: Hip-Hop</p>
-                    <a href="artist.html?id=artist2" class="follow-button" aria-label="Follow Artist 2">Follow</a>
+                    <button class="follow-button">Follow</button>
                     <div class="card-actions">
-                        <button class="share-button" data-share="twitter" data-title="Artist 2 - Hip-Hop Star" aria-label="Share Artist 2 on Twitter">Share on Twitter</button>
-                        <button class="share-button" data-share="tiktok" data-title="Artist 2 - Hip-Hop Star" aria-label="Share Artist 2 on TikTok">Share on TikTok</button>
+                        <button class="share-button" data-share="twitter" data-title="Artist 2">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="Artist 2">Share on TikTok</button>
                     </div>
                 </article>
             </div>
@@ -146,10 +191,10 @@
                         <h3 itemprop="headline">Concert Tour Announced</h3>
                         <p itemprop="description">Get tickets for the biggest tour of 2025.</p>
                         <meta itemprop="datePublished" content="2025-04-30">
-                        <a href="news.html" class="read-more" aria-label="Read more about concert tour">Read More</a>
+                        <a href="#" class="read-more">Read More</a>
                         <div class="card-actions">
-                            <button class="share-button" data-share="twitter" data-title="Concert Tour Announced for 2025" aria-label="Share Concert Tour news on Twitter">Share on Twitter</button>
-                            <button class="share-button" data-share="tiktok" data-title="Concert Tour Announced for 2025" aria-label="Share Concert Tour news on TikTok">Share on TikTok</button>
+                            <button class="share-button" data-share="twitter" data-title="Concert Tour Announced">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="Concert Tour Announced">Share on TikTok</button>
                         </div>
                     </div>
                 </article>
@@ -159,10 +204,10 @@
                         <h3 itemprop="headline">Award Show Highlights</h3>
                         <p itemprop="description">Recap of last night’s music awards.</p>
                         <meta itemprop="datePublished" content="2025-04-30">
-                        <a href="article.html?id=awards" class="read-more" aria-label="Read more about award show highlights">Read More</a>
+                        <a href="#" class="read-more">Read More</a>
                         <div class="card-actions">
-                            <button class="share-button" data-share="twitter" data-title="Award Show Highlights 2025" aria-label="Share Award Show news on Twitter">Share on Twitter</button>
-                            <button class="share-button" data-share="tiktok" data-title="Award Show Highlights 2025" aria-label="Share Award Show news on TikTok">Share on TikTok</button>
+                            <button class="share-button" data-share="twitter" data-title="Award Show Highlights">Share on Twitter</button>
+                            <button class="share-button" data-share="tiktok" data-title="Award Show Highlights">Share on TikTok</button>
                         </div>
                     </div>
                 </article>
@@ -177,16 +222,16 @@
                     <video src="https://example.com/tiktok-clip.mp4" muted loop playsinline loading="lazy"></video>
                     <p>#MusicVibes</p>
                     <div class="card-actions">
-                        <button class="share-button" data-share="twitter" data-title="#MusicVibes on PopFusion" aria-label="Share #MusicVibes on Twitter">Share on Twitter</button>
-                        <button class="share-button" data-share="tiktok" data-title="#MusicVibes on PopFusion" aria-label="Share #MusicVibes on TikTok">Share on TikTok</button>
+                        <button class="share-button" data-share="twitter" data-title="#MusicVibes">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="#MusicVibes">Share on TikTok</button>
                     </div>
                 </div>
                 <div class="social-card">
                     <img src="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg" alt="Instagram Post" loading="lazy">
                     <p>#NewRelease</p>
                     <div class="card-actions">
-                        <button class="share-button" data-share="twitter" data-title="#NewRelease on PopFusion" aria-label="Share #NewRelease on Twitter">Share on Twitter</button>
-                        <button class="share-button" data-share="tiktok" data-title="#NewRelease on PopFusion" aria-label="Share #NewRelease on TikTok">Share on TikTok</button>
+                        <button class="share-button" data-share="twitter" data-title="#NewRelease">Share on Twitter</button>
+                        <button class="share-button" data-share="tiktok" data-title="#NewRelease">Share on TikTok</button>
                     </div>
                 </div>
             </div>
@@ -198,7 +243,7 @@
             <p>Subscribe for the latest music news and exclusive playlists.</p>
             <div class="newsletter-form">
                 <input type="email" placeholder="Enter your email" aria-label="Email address">
-                <button class="subscribe-button" href="subscribe.html" aria-label="Subscribe to newsletter">Subscribe</button>
+                <button class="subscribe-button">Subscribe</button>
             </div>
         </section>
     </main>
@@ -215,10 +260,10 @@
             <div class="slogan">Your Music, Your Vibe</div>
             <p>© 2025 PopFusion. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://facebook.com/PopFusion" rel="noopener noreferrer" aria-label="PopFusion on Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/PopFusion" rel="noopener noreferrer" aria-label="PopFusion on Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://instagram.com/PopFusion" rel="noopener noreferrer" aria-label="PopFusion on Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://tiktok.com/@PopFusion" rel="noopener noreferrer" aria-label="PopFusion on TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://facebook.com" rel="noopener noreferrer">Facebook</a>
+                <a href="https://twitter.com" rel="noopener noreferrer">Twitter</a>
+                <a href="https://instagram.com" rel="noopener noreferrer">Instagram</a>
+                <a href="https://tiktok.com" rel="noopener noreferrer">TikTok</a>
             </div>
         </div>
         <div class="footer-links">
@@ -235,25 +280,5 @@
             <p>Designed by Ruben</p>
         </div>
     </footer>
-
-    <script>
-        // Handle share buttons dynamically
-        document.querySelectorAll('.share-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const platform = button.getAttribute('data-share');
-                const title = button.getAttribute('data-title');
-                const baseUrl = 'https://popfusion.com';
-                let shareUrl;
-                if (platform === 'twitter') {
-                    shareUrl = `https://x.com/intent/post?text=${encodeURIComponent(title)}&url=${baseUrl}`;
-                } else if (platform === 'tiktok') {
-                    shareUrl = `https://tiktok.com?text=${encodeURIComponent(title)}`;
-                }
-                if (shareUrl) {
-                    window.open(shareUrl, '_blank', 'noopener,noreferrer');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

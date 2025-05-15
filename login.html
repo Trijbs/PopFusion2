@@ -3,81 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopFusion - Login</title>
+    <meta name="description" content="Log in to your PopFusion account to access personalized music content.">
+    <meta name="keywords" content="login, PopFusion, music, account">
+    <meta property="og:title" content="PopFusion - Log In">
+    <meta property="og:description" content="Sign in to PopFusion for exclusive music and playlists.">
+    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
+    <title>PopFusion - Log In</title>
     <link rel="stylesheet" href="styles.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="data.js"></script>
-    <script src="search.js"></script>
-    <script src="menu.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <script defer src="config.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="search.js"></script>
+    <script defer src="menu.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="shared.js"></script>
 </head>
-<body>
-    <header>
+<body class="dark-mode">
+    <header class="sticky-header">
         <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, and Share</div>
         <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+            <button class="search-button" aria-label="Submit search">Search</button>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
+        <nav role="navigation">
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+            <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
             <div class="auth-buttons">
                 <button class="sign-in"><a href="login.html">Sign In</a></button>
                 <button class="register"><a href="register.html">Register</a></button>
             </div>
-            <div class="menu">
-                <button class="close-button">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="top100.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="auth-container">
-            <h1>Log In</h1>
-            <p>Sign in to access exclusive music content and personalized playlists.</p>
-            <form class="auth-form">
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" aria-label="Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" aria-label="Password" required>
-                </div>
-                <button class="login-button" type="submit">Log In</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">The Ultimate Music Experience</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
-            </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
-        </div>
-    </footer>
-</body>
-</html>
+            <

@@ -108,4 +108,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '100px' });
 
     document.querySelectorAll('img[data-src], video[data-src]').forEach(el => observer.observe(el));
+// Festival Countdown Timer
+function updateCountdown() {
+    const festivalDate = new Date('2025-07-12T00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = festivalDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    if (document.getElementById('days')) {
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+    }
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
 });
