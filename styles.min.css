@@ -65,7 +65,7 @@
 .feature-icon {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    display: flex;
+    display: block;
 }
 .festival-cta {
     display: flex;
@@ -97,7 +97,7 @@
 .festival-countdown {
     display: flex;
     flex-direction: column;
-    align-items: right;
+    align-items: center;
     gap: 1rem;
     background: rgba(255,255,255,0.08);
     border-radius: 16px;
@@ -106,7 +106,7 @@
     flex: 1;
 }
 .countdown-item {
-    text-align: flex;
+    text-align: center;
     background: rgba(255,255,255,0.1);
     padding: 1rem;
     border-radius: 12px;
