@@ -3,7 +3,7 @@
 <!-- HEADER STYLE: CLASSIC -->
 <div align="center">
 
-<img src="PopFusion2.png" width="30%" style="position: relative; top: 0; right: 0;" alt="Project Logo"/>
+
 
 # POPFUSION2
 
