@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Check out the PopFusion Top 100 music charts, updated weekly.">
-    <meta name="keywords" content="music charts, top 100, PopFusion, billboard">
-    <meta property="og:title" content="PopFusion - Top 100 Charts">
-    <meta property="og:description" content="Explore the latest Top 100 music charts on PopFusion.">
+    <meta name="description" content="Check out the PopFusion 2025 Top 100 music charts, updated weekly with AI-powered insights.">
+    <meta name="keywords" content="music charts, top 100, PopFusion 2025, billboard, trending music, AI insights">
+    <meta property="og:title" content="PopFusion 2025 - Top 100 Charts">
+    <meta property="og:description" content="Explore the latest Top 100 music charts with real-time updates and AI-powered insights on PopFusion 2025.">
     <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
-    <title>PopFusion - Top 100 Charts</title>
+    <title>PopFusion 2025 - Top 100 Charts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <script defer src="config.js"></script>
     <script defer src="data.js"></script>
     <script defer src="search.js"></script>
@@ -18,6 +20,7 @@
     <script defer src="spotify.min.js"></script>
     <script defer src="analytics.js"></script>
     <script defer src="shared.js"></script>
+    <script defer src="modern-interactions.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initInfiniteScroll('.billboard-grid', fetchCharts, renderTracks);
@@ -32,69 +35,222 @@
         });
     </script>
 </head>
-<body class="dark-mode">
-    <header class="sticky-header">
-        <div class="logo">PopFusion</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search charts..." aria-label="Search">
-            <button class="search-button" aria-label="Submit search">Search</button>
+<body class="dark-mode modern-2025">
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Glassmorphism Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                <stop offset="100%" style="stop-color:#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
+                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">PopFusion</span>
+                <span class="logo-year">2025</span>
+            </div>
+            <nav class="header-nav">
+                <div class="menu">
+                    <button class="close-button" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="billboard.html" class="active">Top 100</a></li>
+                        <li><a href="spotify.html">Spotify Playlists</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav role="navigation">
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-            <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
-            </div>
-            <div class="menu">
-                <button class="close-button" aria-label="Close menu">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
-    <main>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="charts-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">📊</span>
+                        <span>Live Charts</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line">Top 100</span>
+                        <span class="title-line gradient-text">Global Charts</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Real-time music charts powered by AI analytics. Discover what's trending worldwide 
+                        with live updates and predictive insights.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">Live</div>
+                            <div class="stat-label">Updates</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number">100</div>
+                            <div class="stat-label">Top Tracks</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number">AI</div>
+                            <div class="stat-label">Powered</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
         <section class="billboard-container">
-            <h1>Top 100 Charts</h1>
-            <h2>This Week’s Hits</h2>
-            <div class="billboard-grid"></div>
-            <div class="infinite-spinner"></div>
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">🔥</span>
+                        <span>This Week's Hits</span>
+                    </div>
+                    <h2 class="section-title">Global Top 100</h2>
+                    <div class="chart-filters">
+                        <button class="filter-btn active">All</button>
+                        <button class="filter-btn">Pop</button>
+                        <button class="filter-btn">Hip-Hop</button>
+                        <button class="filter-btn">Electronic</button>
+                        <button class="filter-btn">Rock</button>
+                    </div>
+                </div>
+                
+                <div class="billboard-grid"></div>
+                <div class="infinite-spinner"></div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">Your Music, Your Vibe</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com" rel="noopener noreferrer">Facebook</a>
-                <a href="https://twitter.com" rel="noopener noreferrer">Twitter</a>
-                <a href="https://instagram.com" rel="noopener noreferrer">Instagram</a>
-                <a href="https://tiktok.com" rel="noopener noreferrer">TikTok</a>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
+                            <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                        </svg>
+                        <span class="footer-logo-text">PopFusion 2025</span>
+                    </div>
+                    <p class="footer-tagline">The future of music discovery</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Discover</h4>
+                        <ul>
+                            <li><a href="discover.html">New Music</a></li>
+                            <li><a href="billboard.html">Charts</a></li>
+                            <li><a href="electronic.html">Genres</a></li>
+                            <li><a href="artist.html">Artists</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Features</h4>
+                        <ul>
+                            <li><a href="#">AI Playlists</a></li>
+                            <li><a href="#">Spatial Audio</a></li>
+                            <li><a href="#">Social Listening</a></li>
+                            <li><a href="#">Metaverse</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="privacy.html">Privacy</a></li>
+                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 PopFusion. All rights reserved.</p>
+                </div>
+                <div class="footer-meta">
+                    <span class="version">v2.0.0</span>
+                    <span class="separator">•</span>
+                    <span class="designer">Designed by Ruben</span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
