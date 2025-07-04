@@ -3,94 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore curated Spotify playlists on PopFusion. Discover new music, filter by genre, and enjoy seamless streaming.">
-    <meta name="keywords" content="music, playlists, Spotify, PopFusion, streaming, genres">
-    <meta property="og:title" content="PopFusion - Spotify Playlists">
-    <meta property="og:description" content="Discover curated Spotify playlists with PopFusion. Filter by genre and stream your favorite tracks.">
+    <meta name="description" content="Explore curated Spotify playlists on PopFusion 2025. Discover new music, filter by genre, and enjoy seamless streaming.">
+    <meta name="keywords" content="Spotify playlists, PopFusion 2025, music streaming, curated playlists, music discovery">
+    <meta property="og:title" content="PopFusion 2025 - Spotify Playlists">
+    <meta property="og:description" content="Discover curated Spotify playlists with PopFusion 2025. Filter by genre and stream your favorite tracks.">
     <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
-    <title>PopFusion - Spotify Playlists</title>
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6366f1">
+    <title>PopFusion 2025 - Spotify Playlists</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-2025.css">
     <script defer src="config.js"></script>
     <script defer src="data.js"></script>
     <script defer src="search.js"></script>
     <script defer src="menu.js"></script>
     <script defer src="spotify.min.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="modern-interactions.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, Share</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search artists, songs, albums..." aria-label="Search">
-            <button class="search-button" aria-label="Submit search">Search</button>
+<body class="dark-mode modern-2025">
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Glassmorphism Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                <stop offset="100%" style="stop-color:#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
+                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">PopFusion</span>
+                <span class="logo-year">2025</span>
+            </div>
+            <nav class="header-nav">
+                <div class="menu">
+                    <button class="close-button" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="billboard.html">Top 100</a></li>
+                        <li><a href="spotify.html" class="active">Spotify Playlists</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav role="navigation">
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
-            </div>
-            <div class="menu">
-                <button class="close-button" aria-label="Close menu">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
-    <main>
-        <section class="spotify-container">
-            <h2>Curated Spotify Playlists</h2>
-            <div class="filter-bar">
-                <label for="genre-filter" class="sr-only">Filter by genre</label>
-                <select id="genre-filter" aria-label="Filter playlists by genre">
-                    <option value="all">All Genres</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Hip-Hop">Hip-Hop</option>
-                    <option value="Electronic">Electronic</option>
-                    <option value="Rock">Rock</option>
-                </select>
-                <button class="create-playlist" data-tooltip="Create a new playlist (coming soon)" aria-label="Create a new playlist">Create Playlist</button>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="discover-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🎵</span>
+                        <span>Spotify Integration</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line">Curated</span>
+                        <span class="title-line gradient-text">Spotify Playlists</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Discover handpicked Spotify playlists curated by music experts and AI. From trending hits to hidden gems, find your perfect soundtrack.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Curated Playlists</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Songs Available</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Updated Daily</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="spinner" aria-hidden="true"></div>
-            <div class="error-message" aria-live="polite"></div>
-            <div class="spotify-grid" id="spotify-grid" aria-live="polite"></div>
-            <button class="load-more" id="load-more" aria-label="Load more playlists">Load More</button>
+        </section>
+
+        <!-- Playlist Filters -->
+        <section class="playlist-filters">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span>🎯</span>
+                        <span>Filter & Discover</span>
+                    </div>
+                    <h2 class="section-title">Find Your Perfect Playlist</h2>
+                </div>
+
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label class="filter-label">Genre</label>
+                        <select class="filter-select" id="genreFilter">
+                            <option value="">All Genres</option>
+                            <option value="pop">Pop</option>
+                            <option value="hip-hop">Hip-Hop</option>
+                            <option value="rock">Rock</option>
+                            <option value="electronic">Electronic</option>
+                            <option value="indie">Indie</option>
+                            <option value="jazz">Jazz</option>
+                            <option value="classical">Classical</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Mood</label>
+                        <select class="filter-select" id="moodFilter">
+                            <option value="">All Moods</option>
+                            <option value="energetic">Energetic</option>
+                            <option value="chill">Chill</option>
+                            <option value="focus">Focus</option>
+                            <option value="party">Party</option>
+                            <option value="romantic">Romantic</option>
+                            <option value="workout">Workout</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Duration</label>
+                        <select class="filter-select" id="durationFilter">
+                            <option value="">Any Length</option>
+                            <option value="short">Under 1 hour</option>
+                            <option value="medium">1-3 hours</option>
+                            <option value="long">3+ hours</option>
+                        </select>
+                    </div>
+                    <button class="primary-btn" id="applyFilters">Apply Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Playlists -->
+        <section class="featured-playlists">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span>⭐</span>
+                        <span>Editor's Choice</span>
+                    </div>
+                    <h2 class="section-title">Featured Playlists</h2>
+                </div>
+
+                <div class="playlists-grid">
+                    <div class="playlist-card featured">
+                        <div class="playlist-image">
+                            <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Today's Top Hits">
+                            <div class="playlist-overlay">
+                                <button class="play-playlist-btn">▶</button>
+                            </div>
+                            <div class="playlist-badge">Trending</div>
+                        </div>
+                        <div class="playlist-info">
+                            <h3 class="playlist-title">Today's Top Hits</h3>
+                            <p class="playlist-description">The biggest songs right now</p>
+                            <div class="playlist-stats">
+                                <span>🎵 50 songs</span>
+                                <span>⏱️ 2h 45m</span>
+                                <span>👥 2.1M followers</span>
+                            </div>
+                            <div class="playlist-actions">
+                                <button class="primary-btn">Play on Spotify</button>
+                                <button class="secondary-btn">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Chill Vibes">
+                            <div class="playlist-overlay">
+                                <button class="play-playlist-btn">▶</button>
+                            </div>
+                            <div class="playlist-badge">Chill</div>
+                        </div>
+                        <div class="playlist-info">
+                            <h3 class="playlist-title">Chill Vibes</h3>
+                            <p class="playlist-description">Relaxing tunes for any time</p>
+                            <div class="playlist-stats">
+                                <span>🎵 75 songs</span>
+                                <span>⏱️ 4h 12m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Workout Motivation">
+                            <div class="playlist-overlay">
+                                <button class="play-playlist-btn">▶</button>
+                            </div>
+                            <div class="playlist-badge">Energy</div>
+                        </div>
+                        <div class="playlist-info">
+                            <h3 class="playlist-title">Workout Motivation</h3>
+                            <p class="playlist-description">High-energy tracks to power your workout</p>
+                            <div class="playlist-stats">
+                                <span>🎵 40 songs</span>
+                                <span>⏱️ 2h 30m</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg" alt="Focus Flow">
+                            <div class="playlist-overlay">
+                                <button class="play-playlist-btn">▶</button>
+                            </div>
+                            <div class="playlist-badge">Focus</div>
+                        </div>
+                        <div class="playlist-info">
+                            <h3 class="playlist-title">Focus Flow</h3>
+                            <p class="playlist-description">Instrumental beats for deep work</p>
+                            <div class="playlist-stats">
+                                <span>🎵 60 songs</span>
+                                <span>⏱️ 3h 45m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Playlists -->
+        <section class="all-playlists">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">All Playlists</h2>
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid">Grid</button>
+                        <button class="view-btn" data-view="list">List</button>
+                    </div>
+                </div>
+
+                <div class="playlists-container" id="playlistsContainer">
+                    <!-- Playlists will be loaded here dynamically -->
+                    <div class="loading-placeholder">Loading playlists...</div>
+                </div>
+
+                <button class="show-more-btn" id="loadMorePlaylists">
+                    <span>Load More Playlists</span>
+                    <span>↓</span>
+                </button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">The Ultimate Music Experience</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com" rel="noopener noreferrer">Facebook</a>
-                <a href="https://twitter.com" rel="noopener noreferrer">Twitter</a>
-                <a href="https://instagram.com" rel="noopener noreferrer">Instagram</a>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
+                            <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                        </svg>
+                        <span class="footer-logo-text">PopFusion 2025</span>
+                    </div>
+                    <p class="footer-tagline">Unite Your Music Journey, Discover the Beat</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Spotify">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Discover</h4>
+                        <ul>
+                            <li><a href="billboard.html">Top Charts</a></li>
+                            <li><a href="artist.html">New Artists</a></li>
+                            <li><a href="discover.html">AI Recommendations</a></li>
+                            <li><a href="spotify.html">Spotify Playlists</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="#">Music Reviews</a></li>
+                            <li><a href="#">Artist Interviews</a></li>
+                            <li><a href="#">User Playlists</a></li>
+                            <li><a href="#">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li><a href="#">Music Player</a></li>
+                            <li><a href="#">Playlist Creator</a></li>
+                            <li><a href="#">Song Recognition</a></li>
+                            <li><a href="#">API Access</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 PopFusion. All rights reserved.
+                </div>
+                <div class="footer-meta">
+                    <span>Made with ❤️ for music lovers</span>
+                    <span class="separator">•</span>
+                    <span>v2.0.1</span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

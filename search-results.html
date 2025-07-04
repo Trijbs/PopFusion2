@@ -3,68 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results - PopFusion</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="data.js"></script>
-    <script src="search.js"></script>
-    <script src="menu.js"></script>
+    <meta name="description" content="Search results on PopFusion 2025. Find artists, songs, albums, and playlists with our advanced search.">
+    <meta name="keywords" content="music search, PopFusion 2025, search results, find music, artists, songs, albums">
+    <meta property="og:title" content="PopFusion 2025 - Search Results">
+    <meta property="og:description" content="Discover music with PopFusion 2025's powerful search. Find exactly what you're looking for.">
+    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6366f1">
+    <title>PopFusion 2025 - Search Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="styles-2025.css">
+    <script defer src="config.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="search.js"></script>
+    <script defer src="menu.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="modern-interactions.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, and Share</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+<body class="dark-mode modern-2025">
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Glassmorphism Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                <stop offset="100%" style="stop-color:#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
+                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">PopFusion</span>
+                <span class="logo-year">2025</span>
+            </div>
+            <nav class="header-nav">
+                <div class="menu">
+                    <button class="close-button" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="billboard.html">Top 100</a></li>
+                        <li><a href="spotify.html">Spotify Playlists</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
-            </div>
-            <div class="menu">
-                <button class="close-button">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
-    <main class="search-results-container">
-        <h2>Search Results for "<span id="query"></span>"</h2>
-        <div class="results-grid" id="results-grid"></div>
+    <main class="main-content">
+        <!-- Search Header -->
+        <section class="search-header">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-title">
+                        <h1>Search Results</h1>
+                        <p class="search-query">Results for "<span id="searchQuery">...</span>"</p>
+                    </div>
+                    
+                    <div class="search-bar-container">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="searchInput" class="search-input" placeholder="Search artists, songs, albums..." aria-label="Search">
+                            <button class="search-btn" id="searchBtn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Filters -->
+        <section class="search-filters">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="artists">Artists</button>
+                    <button class="filter-tab" data-filter="songs">Songs</button>
+                    <button class="filter-tab" data-filter="albums">Albums</button>
+                    <button class="filter-tab" data-filter="playlists">Playlists</button>
+                </div>
+                
+                <div class="search-stats">
+                    <span id="resultsCount">0 results found</span>
+                    <span class="search-time">in 0.23 seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results -->
+        <section class="search-results">
+            <div class="container">
+                <!-- Top Results -->
+                <div class="results-section" id="topResults">
+                    <h2 class="results-title">Top Results</h2>
+                    <div class="top-results-grid">
+                        <!-- Top result will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Artists Results -->
+                <div class="results-section" id="artistsResults">
+                    <h2 class="results-title">Artists</h2>
+                    <div class="artists-grid">
+                        <!-- Sample artist results -->
+                        <div class="artist-result-card">
+                            <div class="artist-image">
+                                <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Artist">
+                                <div class="artist-overlay">
+                                    <button class="play-btn">▶</button>
+                                </div>
+                            </div>
+                            <div class="artist-info">
+                                <h3 class="artist-name">Luna Waves</h3>
+                                <p class="artist-genre">Indie Pop</p>
+                                <div class="artist-stats">
+                                    <span>2.1M monthly listeners</span>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="artist-result-card">
+                            <div class="artist-image">
+                                <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Artist">
+                                <div class="artist-overlay">
+                                    <button class="play-btn">▶</button>
+                                </div>
+                            </div>
+                            <div class="artist-info">
+                                <h3 class="artist-name">Neon Dreams</h3>
+                                <p class="artist-genre">Electronic</p>
+                                <div class="artist-stats">
+                                    <span>850K monthly listeners</span>
+                                </div>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Songs Results -->
+                <div class="results-section" id="songsResults">
+                    <h2 class="results-title">Songs</h2>
+                    <div class="songs-list">
+                        <!-- Sample song results -->
+                        <div class="song-result-item">
+                            <div class="song-rank">1</div>
+                            <div class="song-image">
+                                <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg" alt="Song">
+                                <button class="play-btn">▶</button>
+                            </div>
+                            <div class="song-info">
+                                <h4 class="song-title">Midnight Echoes</h4>
+                                <p class="song-artist">Luna Waves</p>
+                            </div>
+                            <div class="song-stats">
+                                <span class="song-duration">3:42</span>
+                                <span class="song-plays">12.5M plays</span>
+                            </div>
+                            <div class="song-actions">
+                                <button class="action-btn" title="Add to playlist">+</button>
+                                <button class="action-btn" title="Like">♡</button>
+                                <button class="action-btn" title="More">⋯</button>
+                            </div>
+                        </div>
+
+                        <div class="song-result-item">
+                            <div class="song-rank">2</div>
+                            <div class="song-image">
+                                <img src="https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg" alt="Song">
+                                <button class="play-btn">▶</button>
+                            </div>
+                            <div class="song-info">
+                                <h4 class="song-title">Electric Dreams</h4>
+                                <p class="song-artist">Neon Dreams</p>
+                            </div>
+                            <div class="song-stats">
+                                <span class="song-duration">4:15</span>
+                                <span class="song-plays">8.2M plays</span>
+                            </div>
+                            <div class="song-actions">
+                                <button class="action-btn" title="Add to playlist">+</button>
+                                <button class="action-btn" title="Like">♡</button>
+                                <button class="action-btn" title="More">⋯</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Albums Results -->
+                <div class="results-section" id="albumsResults">
+                    <h2 class="results-title">Albums</h2>
+                    <div class="albums-grid">
+                        <!-- Sample album results -->
+                        <div class="album-result-card">
+                            <div class="album-image">
+                                <img src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg" alt="Album">
+                                <div class="album-overlay">
+                                    <button class="play-album-btn">▶</button>
+                                </div>
+                            </div>
+                            <div class="album-info">
+                                <h3 class="album-title">Cosmic Waves</h3>
+                                <p class="album-artist">Luna Waves</p>
+                                <p class="album-year">2024 • 12 tracks</p>
+                            </div>
+                        </div>
+
+                        <div class="album-result-card">
+                            <div class="album-image">
+                                <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Album">
+                                <div class="album-overlay">
+                                    <button class="play-album-btn">▶</button>
+                                </div>
+                            </div>
+                            <div class="album-info">
+                                <h3 class="album-title">Digital Horizons</h3>
+                                <p class="album-artist">Neon Dreams</p>
+                                <p class="album-year">2024 • 10 tracks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results State -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-content">
+                        <div class="no-results-icon">🔍</div>
+                        <h3>No results found</h3>
+                        <p>Try adjusting your search terms or browse our featured content</p>
+                        <div class="no-results-actions">
+                            <a href="discover.html" class="primary-btn">Discover Music</a>
+                            <a href="billboard.html" class="secondary-btn">Browse Charts</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-section">
+                    <button class="show-more-btn" id="loadMoreResults">
+                        <span>Load More Results</span>
+                        <span>↓</span>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">PopFusion: Where Music Lives</div>
-            <p>Join our community to stay updated with the latest music trends and exclusive content.</p>
-            <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
+                            <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                        </svg>
+                        <span class="footer-logo-text">PopFusion 2025</span>
+                    </div>
+                    <p class="footer-tagline">Unite Your Music Journey, Discover the Beat</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Spotify">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Discover</h4>
+                        <ul>
+                            <li><a href="billboard.html">Top Charts</a></li>
+                            <li><a href="artist.html">New Artists</a></li>
+                            <li><a href="discover.html">AI Recommendations</a></li>
+                            <li><a href="spotify.html">Playlists</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="#">Music Reviews</a></li>
+                            <li><a href="#">Artist Interviews</a></li>
+                            <li><a href="#">User Playlists</a></li>
+                            <li><a href="#">Forums</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li><a href="#">Music Player</a></li>
+                            <li><a href="#">Playlist Creator</a></li>
+                            <li><a href="#">Song Recognition</a></li>
+                            <li><a href="#">API Access</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 PopFusion. All rights reserved.</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed with ❤️ by the PopFusion Team</p>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 PopFusion. All rights reserved.
+                </div>
+                <div class="footer-meta">
+                    <span>Made with ❤️ for music lovers</span>
+                    <span class="separator">•</span>
+                    <span>v2.0.1</span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

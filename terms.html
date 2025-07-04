@@ -3,74 +3,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopFusion - Terms of Service</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="data.js"></script>
-    <script src="search.js"></script>
-    <script src="menu.js"></script>
+    <meta name="description" content="Terms of Service for PopFusion 2025. Read our terms and conditions for using our music discovery platform.">
+    <meta name="keywords" content="terms of service, PopFusion 2025, legal, terms and conditions, user agreement">
+    <meta property="og:title" content="PopFusion 2025 - Terms of Service">
+    <meta property="og:description" content="Terms of Service and user agreement for PopFusion 2025 music platform.">
+    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6366f1">
+    <title>PopFusion 2025 - Terms of Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="styles-2025.css">
+    <script defer src="config.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="modern-interactions.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, and Share</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+<body class="dark-mode modern-2025">
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Glassmorphism Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                <stop offset="100%" style="stop-color:#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
+                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">PopFusion</span>
+                <span class="logo-year">2025</span>
+            </div>
+            <nav class="header-nav">
+                <div class="menu">
+                    <button class="close-button" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="billboard.html">Top 100</a></li>
+                        <li><a href="spotify.html">Spotify Playlists</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
-            </div>
-            <div class="menu">
-                <button class="close-button">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
-    <main>
-        <section class="terms-container">
-            <h2>Terms of Service</h2>
-            <div class="terms-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <main class="main-content">
+        <!-- Legal Hero -->
+        <section class="legal-hero">
+            <div class="container">
+                <div class="legal-header">
+                    <div class="legal-badge">
+                        <span>📋</span>
+                        <span>Legal Document</span>
+                    </div>
+                    <h1 class="legal-title">Terms of Service</h1>
+                    <p class="legal-subtitle">
+                        Please read these terms carefully before using PopFusion 2025
+                    </p>
+                    <div class="legal-meta">
+                        <span class="last-updated">Last updated: January 1, 2025</span>
+                        <span class="effective-date">Effective: January 1, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms Content -->
+        <section class="legal-content">
+            <div class="container">
+                <div class="legal-layout">
+                    <!-- Table of Contents -->
+                    <aside class="legal-toc">
+                        <div class="toc-container">
+                            <h3 class="toc-title">Table of Contents</h3>
+                            <nav class="toc-nav">
+                                <ul>
+                                    <li><a href="#acceptance" class="toc-link">1. Acceptance of Terms</a></li>
+                                    <li><a href="#description" class="toc-link">2. Service Description</a></li>
+                                    <li><a href="#accounts" class="toc-link">3. User Accounts</a></li>
+                                    <li><a href="#conduct" class="toc-link">4. User Conduct</a></li>
+                                    <li><a href="#content" class="toc-link">5. Content & Intellectual Property</a></li>
+                                    <li><a href="#privacy" class="toc-link">6. Privacy & Data</a></li>
+                                    <li><a href="#payments" class="toc-link">7. Payments & Subscriptions</a></li>
+                                    <li><a href="#termination" class="toc-link">8. Termination</a></li>
+                                    <li><a href="#disclaimers" class="toc-link">9. Disclaimers</a></li>
+                                    <li><a href="#limitation" class="toc-link">10. Limitation of Liability</a></li>
+                                    <li><a href="#governing" class="toc-link">11. Governing Law</a></li>
+                                    <li><a href="#contact" class="toc-link">12. Contact Information</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="legal-main">
+                        <div class="terms-content">
+                            <section id="acceptance" class="terms-section">
+                                <h2>1. Acceptance of Terms</h2>
+                                <p>
+                                    By accessing or using PopFusion 2025 ("Service"), you agree to be bound by these Terms of Service ("Terms"). 
+                                    If you disagree with any part of these terms, then you may not access the Service.
+                                </p>
+                                <p>
+                                    These Terms apply to all visitors, users, and others who access or use the Service. 
+                                    We reserve the right to update these Terms at any time without prior notice.
+                                </p>
+                            </section>
+
+                            <section id="description" class="terms-section">
+                                <h2>2. Service Description</h2>
+                                <p>
+                                    PopFusion 2025 is a music discovery and streaming platform that provides:
+                                </p>
+                                <ul>
+                                    <li>Music discovery through AI-powered recommendations</li>
+                                    <li>Access to curated playlists and charts</li>
+                                    <li>Social features for music sharing and community interaction</li>
+                                    <li>Artist profiles and music information</li>
+                                    <li>Integration with third-party streaming services</li>
+                                </ul>
+                                <p>
+                                    We reserve the right to modify, suspend, or discontinue any part of the Service at any time.
+                                </p>
+                            </section>
+
+                            <section id="accounts" class="terms-section">
+                                <h2>3. User Accounts</h2>
+                                <h3>Account Creation</h3>
+                                <p>
+                                    To access certain features, you must create an account. You agree to:
+                                </p>
+                                <ul>
+                                    <li>Provide accurate and complete information</li>
+                                    <li>Maintain the security of your account credentials</li>
+                                    <li>Accept responsibility for all activities under your account</li>
+                                    <li>Notify us immediately of any unauthorized use</li>
+                                </ul>
+                                
+                                <h3>Account Requirements</h3>
+                                <p>
+                                    You must be at least 13 years old to create an account. Users under 18 must have parental consent.
+                                </p>
+                            </section>
+
+                            <section id="conduct" class="terms-section">
+                                <h2>4. User Conduct</h2>
+                                <p>You agree not to:</p>
+                                <ul>
+                                    <li>Violate any applicable laws or regulations</li>
+                                    <li>Infringe on intellectual property rights</li>
+                                    <li>Upload malicious code or viruses</li>
+                                    <li>Harass, abuse, or harm other users</li>
+                                    <li>Spam or send unsolicited communications</li>
+                                    <li>Attempt to gain unauthorized access to the Service</li>
+                                    <li>Use automated systems to access the Service</li>
+                                    <li>Reverse engineer or attempt to extract source code</li>
+                                </ul>
+                            </section>
+
+                            <section id="content" class="terms-section">
+                                <h2>5. Content & Intellectual Property</h2>
+                                <h3>Our Content</h3>
+                                <p>
+                                    All content provided by PopFusion 2025, including but not limited to text, graphics, logos, 
+                                    and software, is owned by us or our licensors and protected by copyright and other intellectual property laws.
+                                </p>
+                                
+                                <h3>User Content</h3>
+                                <p>
+                                    By submitting content to our Service, you grant us a worldwide, non-exclusive, royalty-free license 
+                                    to use, reproduce, modify, and distribute your content in connection with the Service.
+                                </p>
+                                
+                                <h3>Third-Party Content</h3>
+                                <p>
+                                    Music and other content from third parties is subject to their respective terms and licenses. 
+                                    We do not claim ownership of third-party content.
+                                </p>
+                            </section>
+
+                            <section id="privacy" class="terms-section">
+                                <h2>6. Privacy & Data</h2>
+                                <p>
+                                    Your privacy is important to us. Our Privacy Policy explains how we collect, use, and protect your information. 
+                                    By using the Service, you consent to our data practices as described in our 
+                                    <a href="privacy.html" class="legal-link">Privacy Policy</a>.
+                                </p>
+                            </section>
+
+                            <section id="payments" class="terms-section">
+                                <h2>7. Payments & Subscriptions</h2>
+                                <h3>Premium Features</h3>
+                                <p>
+                                    Some features may require payment. All fees are non-refundable unless otherwise stated or required by law.
+                                </p>
+                                
+                                <h3>Subscription Terms</h3>
+                                <ul>
+                                    <li>Subscriptions automatically renew unless cancelled</li>
+                                    <li>You can cancel at any time through your account settings</li>
+                                    <li>Cancellation takes effect at the end of the current billing period</li>
+                                    <li>We may change subscription prices with 30 days notice</li>
+                                </ul>
+                            </section>
+
+                            <section id="termination" class="terms-section">
+                                <h2>8. Termination</h2>
+                                <p>
+                                    We may terminate or suspend your account immediately, without prior notice, for conduct that we believe 
+                                    violates these Terms or is harmful to other users, us, or third parties.
+                                </p>
+                                <p>
+                                    You may terminate your account at any time by contacting us or using the account deletion feature.
+                                </p>
+                            </section>
+
+                            <section id="disclaimers" class="terms-section">
+                                <h2>9. Disclaimers</h2>
+                                <p>
+                                    The Service is provided "as is" without warranties of any kind. We disclaim all warranties, 
+                                    express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, 
+                                    and non-infringement.
+                                </p>
+                                <p>
+                                    We do not guarantee that the Service will be uninterrupted, secure, or error-free.
+                                </p>
+                            </section>
+
+                            <section id="limitation" class="terms-section">
+                                <h2>10. Limitation of Liability</h2>
+                                <p>
+                                    To the maximum extent permitted by law, PopFusion 2025 shall not be liable for any indirect, 
+                                    incidental, special, consequential, or punitive damages, including but not limited to loss of profits, 
+                                    data, or use, arising out of or relating to these Terms or the Service.
+                                </p>
+                                <p>
+                                    Our total liability shall not exceed the amount paid by you for the Service in the 12 months 
+                                    preceding the claim.
+                                </p>
+                            </section>
+
+                            <section id="governing" class="terms-section">
+                                <h2>11. Governing Law</h2>
+                                <p>
+                                    These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], 
+                                    without regard to its conflict of law provisions.
+                                </p>
+                                <p>
+                                    Any disputes arising from these Terms shall be resolved through binding arbitration.
+                                </p>
+                            </section>
+
+                            <section id="contact" class="terms-section">
+                                <h2>12. Contact Information</h2>
+                                <p>
+                                    If you have any questions about these Terms, please contact us:
+                                </p>
+                                <div class="contact-info">
+                                    <p><strong>Email:</strong> legal@popfusion2025.com</p>
+                                    <p><strong>Address:</strong> [Your Business Address]</p>
+                                    <p><strong>Phone:</strong> [Your Phone Number]</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Actions -->
+        <section class="legal-actions">
+            <div class="container">
+                <div class="actions-card">
+                    <h3>Need Help Understanding These Terms?</h3>
+                    <p>Our support team is here to help clarify any questions you may have.</p>
+                    <div class="actions-buttons">
+                        <a href="contact.html" class="primary-btn">Contact Support</a>
+                        <a href="privacy.html" class="secondary-btn">View Privacy Policy</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">The Ultimate Music Experience</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
+                            <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                        </svg>
+                        <span class="footer-logo-text">PopFusion 2025</span>
+                    </div>
+                    <p class="footer-tagline">Unite Your Music Journey, Discover the Beat</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="help.html">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="discover.html">Discover</a></li>
+                            <li><a href="billboard.html">Charts</a></li>
+                            <li><a href="spotify.html">Playlists</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 PopFusion. All rights reserved.
+                </div>
+                <div class="footer-meta">
+                    <span>Made with ❤️ for music lovers</span>
+                    <span class="separator">•</span>
+                    <span>v2.0.1</span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

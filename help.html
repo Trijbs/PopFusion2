@@ -3,78 +3,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopFusion - Help</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="data.js"></script>
-    <script src="search.js"></script>
-    <script src="menu.js"></script>
+    <meta name="description" content="PopFusion 2025 Help Center. Find answers to common questions, tutorials, and support resources.">
+    <meta name="keywords" content="PopFusion 2025 help, support, FAQ, tutorials, troubleshooting, music platform help">
+    <meta property="og:title" content="PopFusion 2025 - Help Center">
+    <meta property="og:description" content="Get help and support for PopFusion 2025. Find answers to your questions and learn how to use our platform.">
+    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6366f1">
+    <title>PopFusion 2025 - Help Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="styles-2025.css">
+    <script defer src="config.js"></script>
+    <script defer src="data.js"></script>
+    <script defer src="analytics.js"></script>
+    <script defer src="modern-interactions.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, and Share</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
+<body class="dark-mode modern-2025">
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Ambient Background Effects -->
+    <div class="ambient-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="noise-overlay"></div>
+    </div>
+
+    <!-- Glassmorphism Header -->
+    <header class="glass-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                <stop offset="100%" style="stop-color:#ec4899"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
+                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">PopFusion</span>
+                <span class="logo-year">2025</span>
+            </div>
+            <nav class="header-nav">
+                <div class="menu">
+                    <button class="close-button" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="billboard.html">Top 100</a></li>
+                        <li><a href="spotify.html">Spotify Playlists</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
-            </div>
-            <div class="menu">
-                <button class="close-button">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
     </header>
 
-    <main>
-        <section class="help-container">
-            <h2>Help & Support</h2>
-            <div class="help-content">
-                <h3>Frequently Asked Questions</h3>
-                <p><strong>How do I create an account?</strong> Visit the <a href="register.html">Register</a> page to sign up.</p>
-                <p><strong>How do I contact support?</strong> Use our <a href="contact.html">Contact</a> page to send us a message.</p>
-                <p><strong>Where can I find new music?</strong> Check out our <a href="spotify.html">New Releases</a> or <a href="discover.html">Discover Weekly</a> pages.</p>
+    <main class="main-content">
+        <!-- Help Hero -->
+        <section class="help-hero">
+            <div class="container">
+                <div class="help-header">
+                    <div class="help-badge">
+                        <span>🆘</span>
+                        <span>Support Center</span>
+                    </div>
+                    <h1 class="help-title">How can we help you?</h1>
+                    <p class="help-subtitle">
+                        Find answers to common questions, browse our guides, or get in touch with our support team.
+                    </p>
+                    
+                    <div class="help-search">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="helpSearch" class="help-search-input" placeholder="Search for help articles, tutorials, or FAQs..." aria-label="Search help">
+                            <button class="search-btn" id="helpSearchBtn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Help Categories -->
+        <section class="help-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Popular Help Topics</h2>
+                    <p class="section-description">Quick access to the most common questions and issues</p>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🎵</div>
+                        <h3 class="category-title">Getting Started</h3>
+                        <p class="category-description">Learn the basics of using PopFusion 2025</p>
+                        <ul class="category-links">
+                            <li><a href="#getting-started">Creating your account</a></li>
+                            <li><a href="#getting-started">Setting up your profile</a></li>
+                            <li><a href="#getting-started">First-time user guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">👑</div>
+                        <h3 class="category-title">Premium & Billing</h3>
+                        <p class="category-description">Subscription, payments, and premium features</p>
+                        <ul class="category-links">
+                            <li><a href="#premium">Upgrading to Premium</a></li>
+                            <li><a href="#premium">Managing your subscription</a></li>
+                            <li><a href="#premium">Billing and payments</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🎧</div>
+                        <h3 class="category-title">Music & Playback</h3>
+                        <p class="category-description">Playing music, playlists, and audio quality</p>
+                        <ul class="category-links">
+                            <li><a href="#playback">Playback issues</a></li>
+                            <li><a href="#playback">Creating playlists</a></li>
+                            <li><a href="#playback">Audio quality settings</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">📱</div>
+                        <h3 class="category-title">Mobile & Desktop</h3>
+                        <p class="category-description">App installation and device compatibility</p>
+                        <ul class="category-links">
+                            <li><a href="#apps">Installing the app</a></li>
+                            <li><a href="#apps">Syncing across devices</a></li>
+                            <li><a href="#apps">Offline downloads</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">⚙️</div>
+                        <h3 class="category-title">Account & Settings</h3>
+                        <p class="category-description">Managing your account and preferences</p>
+                        <ul class="category-links">
+                            <li><a href="#account">Account settings</a></li>
+                            <li><a href="#account">Privacy controls</a></li>
+                            <li><a href="#account">Deleting your account</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-icon">🔧</div>
+                        <h3 class="category-title">Troubleshooting</h3>
+                        <p class="category-description">Common issues and technical problems</p>
+                        <ul class="category-links">
+                            <li><a href="#troubleshooting">Login problems</a></li>
+                            <li><a href="#troubleshooting">App crashes</a></li>
+                            <li><a href="#troubleshooting">Connection issues</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span>❓</span>
+                        <span>Frequently Asked</span>
+                    </div>
+                    <h2 class="section-title">Common Questions</h2>
+                </div>
+
+                <div class="faq-categories">
+                    <div class="faq-category" id="getting-started">
+                        <h3 class="faq-category-title">Getting Started</h3>
+                        <div class="faq-grid">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How do I create a PopFusion account?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Creating an account is easy! Click the "Sign Up" button in the top right corner, enter your email address, create a password, and verify your email. You can also sign up using your Google, Facebook, or Apple account for faster registration.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Is PopFusion free to use?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes! PopFusion offers a free tier with access to millions of songs, basic discovery features, and community functions. However, free users will hear ads between songs and have limited skips. Upgrade to Premium for an ad-free experience with unlimited features.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How do I set up my music preferences?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>After creating your account, you'll be guided through a setup process where you can select your favorite genres, artists, and songs. This helps our AI recommendation system understand your taste and suggest music you'll love.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category" id="premium">
+                        <h3 class="faq-category-title">Premium & Billing</h3>
+                        <div class="faq-grid">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>What's included in PopFusion Premium?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Premium includes ad-free listening, unlimited skips, high-quality audio (320kbps), offline downloads, advanced AI recommendations, and exclusive content. You also get early access to new features and premium-only playlists.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How much does Premium cost?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Premium costs $9.99/month or $7.99/month if you pay annually. We also offer a Family plan for $14.99/month that covers up to 6 accounts. Students can get Premium for $4.99/month with valid student ID verification.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Can I cancel my subscription anytime?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Absolutely! You can cancel your Premium subscription at any time through your account settings. You'll continue to have Premium access until the end of your current billing period, then your account will automatically switch to the free tier.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category" id="playback">
+                        <h3 class="faq-category-title">Music & Playback</h3>
+                        <div class="faq-grid">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Why won't my music play?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Check your internet connection first. If you're connected but still having issues, try refreshing the page or restarting the app. For Premium users, ensure you haven't exceeded the device limit. Contact support if the problem persists.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How do I create and share playlists?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Click the "+" button next to any song to add it to a playlist. You can create new playlists or add to existing ones. To share, go to your playlist, click the share button, and choose how you want to share (link, social media, etc.).</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How do I improve audio quality?</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Go to Settings > Audio Quality. Free users can choose between Normal (128kbps) and High (256kbps). Premium users get access to Very High quality (320kbps) for the best listening experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-category" id="troubleshooting">
+                        <h3 class="faq-category-title">Troubleshooting</h3>
+                        <div class="faq-grid">
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>I can't log into my account</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>First, double-check your email and password. If you've forgotten your password, use the "Forgot Password" link on the login page. Clear your browser cache or try a different browser if issues persist. Contact support if you still can't access your account.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>The app keeps crashing</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Try force-closing and reopening the app. If that doesn't work, restart your device. Make sure you have the latest version of the app installed. If crashes continue, uninstall and reinstall the app, or contact our technical support team.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Music keeps buffering or stopping</span>
+                                    <span class="faq-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>This is usually due to a slow or unstable internet connection. Try switching between WiFi and mobile data, or move closer to your router. Lower the audio quality in settings if you have a slow connection. Premium users can download music for offline listening.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="support-contact">
+            <div class="container">
+                <div class="support-card">
+                    <div class="support-content">
+                        <h2 class="support-title">Still Need Help?</h2>
+                        <p class="support-description">
+                            Can't find what you're looking for? Our support team is here to help you 24/7.
+                        </p>
+                        <div class="support-options">
+                            <div class="support-option">
+                                <div class="option-icon">💬</div>
+                                <div class="option-info">
+                                    <h4>Live Chat</h4>
+                                    <p>Get instant help from our support team</p>
+                                    <span class="option-status online">● Online now</span>
+                                </div>
+                                <button class="option-btn primary-btn">Start Chat</button>
+                            </div>
+
+                            <div class="support-option">
+                                <div class="option-icon">📧</div>
+                                <div class="option-info">
+                                    <h4>Email Support</h4>
+                                    <p>Send us a detailed message</p>
+                                    <span class="option-response">Response within 24 hours</span>
+                                </div>
+                                <a href="contact.html" class="option-btn secondary-btn">Send Email</a>
+                            </div>
+
+                            <div class="support-option">
+                                <div class="option-icon">🌐</div>
+                                <div class="option-info">
+                                    <h4>Community Forum</h4>
+                                    <p>Connect with other users and experts</p>
+                                    <span class="option-community">Join 50K+ members</span>
+                                </div>
+                                <button class="option-btn tertiary-btn">Visit Forum</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Resources -->
+        <section class="help-resources">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span>📚</span>
+                        <span>Resources</span>
+                    </div>
+                    <h2 class="section-title">Additional Resources</h2>
+                </div>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">🎓</div>
+                        <h3 class="resource-title">Video Tutorials</h3>
+                        <p class="resource-description">Step-by-step video guides for all features</p>
+                        <a href="#" class="resource-link">Watch Tutorials →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <h3 class="resource-title">User Guide</h3>
+                        <p class="resource-description">Comprehensive documentation and guides</p>
+                        <a href="#" class="resource-link">Read Guide →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🔄</div>
+                        <h3 class="resource-title">System Status</h3>
+                        <p class="resource-description">Check if our services are running smoothly</p>
+                        <a href="#" class="resource-link">View Status →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">📱</div>
+                        <h3 class="resource-title">Mobile Apps</h3>
+                        <p class="resource-description">Download our apps for iOS and Android</p>
+                        <a href="#" class="resource-link">Get Apps →</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">The Ultimate Music Experience</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 40 40" class="logo-svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
+                                    <stop offset="100%" style="stop-color:#ec4899"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
+                            <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
+                        </svg>
+                        <span class="footer-logo-text">PopFusion 2025</span>
+                    </div>
+                    <p class="footer-tagline">Unite Your Music Journey, Discover the Beat</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Community Forum</a></li>
+                            <li><a href="#">System Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 PopFusion. All rights reserved.
+                </div>
+                <div class="footer-meta">
+                    <span>Made with ❤️ for music lovers</span>
+                    <span class="separator">•</span>
+                    <span>v2.0.1</span>
+                </div>
             </div>
         </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
-        </div>
     </footer>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                
+                // Close all other FAQ items in the same category
+                const category = this.closest('.faq-category');
+                category.querySelectorAll('.faq-question').forEach(q => {
+                    q.setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current item
+                this.setAttribute('aria-expanded', !isExpanded);
+            });
+        });
+
+        // Help search functionality
+        document.getElementById('helpSearchBtn').addEventListener('click', function() {
+            const query = document.getElementById('helpSearch').value.toLowerCase();
+            if (query) {
+                // Simple search implementation - highlight matching FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        item.style.background = 'rgba(99, 102, 241, 0.1)';
+                        item.style.border = '1px solid rgba(99, 102, 241, 0.3)';
+                    } else {
+                        item.style.background = '';
+                        item.style.border = '';
+                    }
+                });
+            }
+        });
+
+        // Enter key search
+        document.getElementById('helpSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('helpSearchBtn').click();
+            }
+        });
+    </script>
 </body>
 </html>
