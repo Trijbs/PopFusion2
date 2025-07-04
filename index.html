@@ -20,9 +20,40 @@
     <script defer src="home.js"></script>
     <script defer src="analytics.js"></script>
     <script defer src="shared.js"></script>
-    <script defer src="interactions.js"></script>
+    <script defer src="modern-interactions.js"></script>
 </head>
 <body class="dark-mode modern-2025">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <svg class="loading-svg" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="45" stroke="url(#loadingGradient)" stroke-width="8" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="75"/>
+                    <defs>
+                        <linearGradient id="loadingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="50%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#ec4899"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="loading-text">PopFusion</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <!-- Ambient Background Effects -->
     <div class="ambient-bg">
         <div class="gradient-orb orb-1"></div>
@@ -51,17 +82,18 @@
                 <span class="logo-text">PopFusion</span>
                 <span class="logo-year">2025</span>
             </div>
-            <div class="menu">
-                <button class="close-button" aria-label="Close menu">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="top100.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+            <nav class="header-nav">
+                <div class="menu">
+                    <button class="close-button" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="top100.html">Top 100</a></li>
+                        <li><a href="spotify.html">Spotify Playlists</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
     </header>
 
     <main class="main-content">
@@ -183,6 +215,27 @@
                         <path d="M7 13l3 3 7-7"/>
                         <path d="M7 6l3 3 7-7"/>
                     </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neural Search Section -->
+        <section class="neural-search">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <div class="search-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="m21 21-4.35-4.35"/>
+                            </svg>
+                        </div>
+                        <input type="text" class="search-input" placeholder="Ask AI to find your perfect music...">
+                        <div class="search-ai-indicator">
+                            <span class="ai-badge">AI</span>
+                        </div>
+                    </div>
+                    <div class="ai-suggestions" style="display: none;"></div>
                 </div>
             </div>
         </section>
@@ -834,5 +887,32 @@
             <p>Designed by Ruben</p>
         </div>
     </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <div class="fab-main">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+        </div>
+        <div class="fab-items">
+            <div class="fab-item" data-action="play">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+            <div class="fab-item" data-action="search">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </div>
+            <div class="fab-item" data-action="share">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.50-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
