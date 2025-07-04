@@ -3,112 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover new music and emerging artists on PopFusion.">
-    <meta name="keywords" content="new music, emerging artists, PopFusion, discover">
-    <meta property="og:title" content="PopFusion - Discover New Music">
-    <meta property="og:description" content="Find curated playlists and rising stars with PopFusion.">
+    <meta name="description" content="Discover new music through our AI-powered community recommendations on PopFusion 2025.">
+    <meta name="keywords" content="AI music discovery, community recommendations, PopFusion 2025, neural search, music community">
+    <meta property="og:title" content="PopFusion 2025 - AI-Powered Music Discovery">
+    <meta property="og:description" content="Join our community and discover music through AI recommendations and community insights.">
     <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
-    <title>PopFusion - Discover New Music</title>
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6366f1">
+    <title>PopFusion 2025 - Discover Music Community</title>
     <link rel="stylesheet" href="styles.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <script defer src="config.js"></script>
-    <script defer src="fetch-config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="data.js"></script>
-    <script defer src="search.js"></script>
-    <script defer src="menu.js"></script>
-    <script defer src="page.js"></script>
+    <script defer src="modern-interactions.js"></script>
     <script defer src="analytics.js"></script>
-    <script defer src="fetch-integration.js"></script>
 </head>
-<body class="dark-mode">
-    <header class="sticky-header">
-        <div class="logo">PopFusion</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search new music..." aria-label="Search">
-            <button class="search-button" aria-label="Submit search">Search</button>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="neural-pulse"></div>
+                <span>PopFusion</span>
+            </div>
+            <div class="loading-text">Discovering Your Music Community...</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
         </div>
-        <nav role="navigation">
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-            <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="floating-particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="modern-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">🎵</div>
+                <span class="logo-text">PopFusion</span>
+                <span class="version-badge">2025</span>
             </div>
-            <div class="menu">
-                <button class="close-button" aria-label="Close menu">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Community</a>
+                <a href="discover.html" class="nav-link active">Discover</a>
+                <a href="artist.html" class="nav-link">Artists</a>
+                <a href="billboard.html" class="nav-link">Charts</a>
+                <a href="contact.html" class="nav-link">Connect</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="notification-btn" aria-label="Notifications">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-menu">
+                    <button class="user-avatar" aria-label="User menu">
+                        <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="User">
+                    </button>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="discover-container">
-            <h1>Discover New Music</h1>
-            <h2>Curated Playlists</h2>
-            <div class="discover-grid">
-                <article class="discover-card">
-                    <img src="https://images.pexels.com/photos/96380/pexels-photo-96380.jpeg" alt="Playlist 1" loading="lazy">
-                    <div class="card-details">
-                        <h3>New Vibes</h3>
-                        <p>Genre: Mixed</p>
-                        <a href="#" class="listen-now">Listen Now</a>
-                    </div>
-                </article>
-                <article class="discover-card">
-                    <img src="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg" alt="Playlist 2" loading="lazy">
-                    <div class="card-details">
-                        <h3>Indie Gems</h3>
-                        <p>Genre: Indie</p>
-                        <a href="#" class="listen-now">Listen Now</a>
-                    </div>
-                </article>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="discover-hero">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
             </div>
-            <h2>Artist Spotlight</h2>
-            <div class="artists-grid">
-                <article class="artist-card">
-                    <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg" alt="New Artist" loading="lazy">
-                    <h3>Rising Star</h3>
-                    <p>Genre: Pop</p>
-                    <button class="follow-button">Follow</button>
-                </article>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">AI-Powered</span>
+                        <br>Music Discovery
+                    </h1>
+                    <p class="hero-subtitle">
+                        Let our neural network understand your taste and connect you with music that resonates with your soul
+                    </p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2.4M+</div>
+                        <div class="stat-label">Songs Analyzed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98.7%</div>
+                        <div class="stat-label">Match Accuracy</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150K+</div>
+                        <div class="stat-label">Happy Users</div>
+                    </div>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">Your Music, Your Vibe</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com" rel="noopener noreferrer">Facebook</a>
-                <a href="https://twitter.com" rel="noopener noreferrer">Twitter</a>
-                <a href="https://instagram.com" rel="noopener noreferrer">Instagram</a>
-                <a href="https://tiktok.com" rel="noopener noreferrer">TikTok</a>
+        <!-- Neural Search -->
+        <section class="neural-search-discover">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Neural Music Search</h2>
+                    <p class="section-subtitle">Describe your mood, and we'll find the perfect soundtrack</p>
+                </div>
+                
+                <div class="neural-search-interface">
+                    <div class="search-container">
+                        <div class="search-input-wrapper">
+                            <input type="text" class="neural-search-input" placeholder="I want something energetic for my workout..." id="neuralSearchInput">
+                            <button class="neural-search-btn" id="neuralSearchBtn">
+                                <span class="search-icon">🧠</span>
+                                <span class="search-text">Analyze</span>
+                            </button>
+                        </div>
+                        <div class="search-suggestions">
+                            <button class="suggestion-chip">Chill vibes for studying</button>
+                            <button class="suggestion-chip">Upbeat songs for running</button>
+                            <button class="suggestion-chip">Emotional ballads for reflection</button>
+                            <button class="suggestion-chip">Party anthems for celebration</button>
+                        </div>
+                    </div>
+                    
+                    <div class="neural-visualization">
+                        <div class="neural-nodes">
+                            <div class="node active" data-genre="pop">Pop</div>
+                            <div class="node" data-genre="rock">Rock</div>
+                            <div class="node" data-genre="electronic">Electronic</div>
+                            <div class="node" data-genre="hip-hop">Hip-Hop</div>
+                            <div class="node" data-genre="indie">Indie</div>
+                            <div class="node" data-genre="jazz">Jazz</div>
+                        </div>
+                        <div class="neural-connections"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
-        </div>
-    </footer>
-</body>
+        </section>
+
+        <!-- Discovery Categories -->
+        <section class="discovery-categories">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Explore by Mood & Genre</h2>
+                    <p class="section-subtitle">Curated collections powered by community insights</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card mood-card">
+                        <div class="card-background">
+                            <div class="mood-gradient happy"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">😊</div>
+                            <h3 class="card-title">Happy Vibes</h3>
+                            <p class="card-description">Uplifting tracks to brighten your day</p>
+                            <div class="card-stats">
+                                <span class="stat">2.1K tracks</span>
+                                <span class="stat">95% match rate</span>
+                            </div>
+                            <button class="card-action primary-btn">Explore</button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card mood-card">
+                        <div class="card-background">
+                            <div class="mood-gradient chill"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">🌙</div>
+                            <h3 class="card-title">Chill Zone</h3>
+                            <p class="card-description">Relaxing melodies for peaceful moments</p>
+                            <div class="card-stats">
+                                <span class="stat">1.8K tracks</span>
+                                <span class="stat">92% match rate</span>
+                            </div>
+                            <button class="card-action primary-btn">Explore</button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card mood-card">
+                        <div class="card-background">
+                            <div class="mood-gradient energetic"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">⚡</div>
+                            <h3 class="card-title">High Energy</h3>
+                            <p class="card-description">Pump-up tracks for maximum motivation</p>
+                            <div class="card-stats">
+                                <span class="stat">3.2K tracks</span>
+                                <span class="stat">97% match rate</span>
+                            </div>
+                            <button class="card-action primary-btn">Explore</button>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card mood-card">
+                        <div class="card-background">
+                            <div class="mood-gradient romantic"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">💕</div>
+                            <h3 class="card-title">Love Songs</h3>
+                            <p class="card-description">Romantic ballads for special moments</p>
+                            <div class="card-stats">
+                                <span class="stat">1.5K tracks</span>
+                                <span class="stat">89% match rate</span>
+                            </div>
+                            <button class="card-action primary-btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Recommendations -->
+        <section class="ai-recommendation
 </html>

@@ -3,89 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact PopFusion for inquiries, feedback, or support.">
-    <meta name="keywords" content="contact, PopFusion, music, support">
-    <meta property="og:title" content="PopFusion - Contact Us">
-    <meta property="og:description" content="Get in touch with PopFusion for any questions or feedback.">
+    <meta name="description" content="Connect with the PopFusion 2025 community. Get support, share feedback, or join our music community.">
+    <meta name="keywords" content="PopFusion 2025, community contact, music support, feedback, connect">
+    <meta property="og:title" content="PopFusion 2025 - Connect with Our Community">
+    <meta property="og:description" content="Join our music community and get the support you need. Connect with fellow music lovers.">
     <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
-    <title>PopFusion - Contact Us</title>
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#6366f1">
+    <title>PopFusion 2025 - Connect with Community</title>
     <link rel="stylesheet" href="styles.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <script defer src="config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script defer src="data.js"></script>
-    <script defer src="search.js"></script>
-    <script defer src="menu.js"></script>
+    <script defer src="modern-interactions.js"></script>
     <script defer src="analytics.js"></script>
-    <script defer src="shared.js"></script>
 </head>
-<body class="dark-mode">
-    <header class="sticky-header">
-        <div class="logo">PopFusion</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
-            <button class="search-button" aria-label="Submit search">Search</button>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="neural-pulse"></div>
+                <span>PopFusion</span>
+            </div>
+            <div class="loading-text">Connecting to Community...</div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
         </div>
-        <nav role="navigation">
-            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
-            <button class="mode-toggle" aria-label="Toggle dark/light mode">🌙</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="floating-particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="modern-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">🎵</div>
+                <span class="logo-text">PopFusion</span>
+                <span class="version-badge">2025</span>
             </div>
-            <div class="menu">
-                <button class="close-button" aria-label="Close menu">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Community</a>
+                <a href="discover.html" class="nav-link">Discover</a>
+                <a href="artist.html" class="nav-link">Artists</a>
+                <a href="billboard.html" class="nav-link">Charts</a>
+                <a href="contact.html" class="nav-link active">Connect</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="notification-btn" aria-label="Notifications">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-menu">
+                    <button class="user-avatar" aria-label="User menu">
+                        <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="User">
+                    </button>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="contact-container">
-            <h1>Contact Us</h1>
-            <p>Have questions or feedback? We'd love to hear from you!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" aria-label="Name" required>
-                <input type="email" placeholder="Your Email" aria-label="Email" required>
-                <textarea placeholder="Your Message" aria-label="Message" required></textarea>
-                <button class="submit-button" type="submit">Send Message</button>
-            </form>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Connect</span>
+                        <br>with Our Community
+                    </h1>
+                    <p class="hero-subtitle">
+                        Join thousands of music lovers, get support, share feedback, or collaborate with fellow enthusiasts
+                    </p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Community Support</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">&lt;2h</div>
+                        <div class="stat-label">Response Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods -->
+        <section class="contact-methods">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">How Can We Help?</h2>
+                    <p class="section-subtitle">Choose the best way to connect with our community</p>
+                </div>
+                
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <div class="method-icon">💬</div>
+                        <h3 class="method-title">Live Chat</h3>
+                        <p class="method-description">Get instant help from our community moderators</p>
+                        <div class="method-status online">
+                            <span class="status-dot"></span>
+                            <span>Online Now</span>
+                        </div>
+                        <button class="method-action primary-btn">Start Chat</button>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-icon">📧</div>
+                        <h3 class="method-title">Email Support</h3>
+                        <p class="method-description">Send us detailed questions or feedback</p>
+                        <div class="method-status">
+                            <span class="response-time">Response within 2 hours</span>
+                        </div>
+                        <button class="method-action secondary-btn">Send Email</button>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-icon">👥</div>
+                        <h3 class="method-title">Community Forum</h3>
+                        <p class="method-description">Connect with other music enthusiasts</p>
+                        <div class="method-status">
+                            <span class="community-count">15.2K active members</span>
+                        </div>
+                        <button class="method-action secondary-btn">Join Forum</button>
+                    </div>
+                    
+                    <div class="method-card">
+                        <div class="method-icon">🎵</div>
+                        <h3 class="method-title">Artist Connect</h3>
+                        <p class="method-description">Direct line to featured artists</p>
+                        <div class="method-status">
+                            <span class="artist-count">500+ artists available</span>
+                        </div>
+                        <button class="method-action secondary-btn">Connect</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <div class="section-container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Send Us a Message</h2>
+                        <p class="form-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    </div>
+                    
+                    <form class="modern-contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <div class="form-focus-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                <div class="form-focus-line"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Choose a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="artist">Artist Collaboration</option>
+                                <option value="community">Community Issues</option>
+                                <option value="business">Business Partnership</option>
+                            </select>
+                            <div class="form-focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Tell us more about your inquiry..."></textarea>
+                            <div class="form-focus-line"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Subscribe to our community newsletter for updates and exclusive content</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn primary-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">Sending...</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Quick answers to common questions</p>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I join the community?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Simply create an account and start exploring! You can join communities, follow artists, and connect with other music lovers instantly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How can I collaborate with artists?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Use our Artist Connect feature to reach out directly to featured artists. Many are actively looking for collaborations!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What kind of support do you offer?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer 24/7 community support, technical assistance, and help with account issues. Our response time is typically under 2 hours.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I report community issues?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Use the contact form above with "Community Issues" as the subject, or reach out through live chat for immediate assistance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Testimonials -->
+        <section class="testimonials-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Community Says</h2>
+                    <p class="section-subtitle">Real feedback from real music lovers</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"PopFusion 2025 has completely transformed how I discover music. The community is amazing and so supportive!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="Sarah M." class="author-avatar">
+                            <div class="author-info">
+                                <div class="author-name">Sarah M.</div>
+                                <div class="author-role">Music Enthusiast</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The artist collaboration features are incredible. I've connected with so many talented musicians through this platform."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg" alt="Alex R." class="author-avatar">
+                            <div class="author-info">
+                                <div class="author-name">Alex R.</div>
+                                <div class="author-role">Producer</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Customer support is outstanding. They helped me resolve my issue within minutes through live chat."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Mike T." class="author-avatar">
+                            <div class="author-info">
+                                <div class="author-name">Mike T.</div>
+                                <div class="author-role">Community Member</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">Your Music, Your Vibe</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com" rel="noopener noreferrer">Facebook</a>
-                <a href="https://twitter.com" rel="noopener noreferrer">Twitter</a>
-                <a href="https://instagram.com" rel="noopener noreferrer">Instagram</a>
-                <a href="https://tiktok.com" rel="noopener noreferrer">TikTok</a>
-            </div>
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab" id="supportFab" aria-label="Quick Support">
+            <span class="fab-icon">💬</span>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <button class="fab-option" data-action="chat">
+                <span class="fab-option-icon">💬</span>
+                <span class="fab-option-text">Live Chat</span>
+            </button>
+            <button class="fab-option" data-action="email">
+                <span class="fab-option-icon">📧</span>
+                <span class="fab-option-text">Email</span>
+            </button>
+            <button class="fab-option" data-action="forum">
+                <span class="fab-option-icon">👥</span>
+                <span class="fab-option-text">Forum</span>
+            </button>
         </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🎵</div>
+                        <span class="logo-text">PopFusion</span>
+                        <span class="version-badge">2025</span>
+                    </div>
+                    <p class="footer-description">
+                        Unite your music journey and discover the beat with our vibrant community of music lovers.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Discord">💬</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Community</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="artist.html">Artists</a></li>
+                        <li><a href="billboard.html">Charts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect</h3>
+                    <p class="footer-text">Join our community newsletter</p>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+      
