@@ -291,19 +291,19 @@ Build PopFusion2 from the source and intsall dependencies:
 
 3. **Install the dependencies:**
 
-echo 'INSERT-INSTALL-COMMAND-HERE'
+No additional dependencies are required.
 
 ### Usage
 
-Run the project with:
+Run the project with a local web server:
 
-echo 'INSERT-RUN-COMMAND-HERE'
+```sh
+npx serve .
+```
 
 ### Testing
 
-Popfusion2 uses the {__test_framework__} test framework. Run the test suite with:
-
-echo 'INSERT-TEST-COMMAND-HERE'
+This project does not include automated tests.
 
 ---
 

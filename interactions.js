@@ -449,12 +449,7 @@ class PopFusionInteractions {
     }
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new PopFusionInteractions();
-});
-
-// Initialize immediately if DOM is already loaded
+// Initialize interactions when the DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         new PopFusionInteractions();
