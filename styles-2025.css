@@ -542,6 +542,13 @@ section {
     border-color: var(--glass-border);
 }
 
+.primary-btn:focus,
+.secondary-btn:focus,
+.tertiary-btn:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Track Lists */
 .tracks-list {
     display: flex;
