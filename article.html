@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Read PopFusion editorial stories about lineup strategy, artist momentum, travel planning, and genre discovery.">
+  <meta name="description" content="Read a PopFusion article with editorial context, detailed body copy, and related stories.">
   <meta name="theme-color" content="#0c0b10">
-  <title>PopFusion - News</title>
+  <title>PopFusion - Article</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
   <script defer src="content.js"></script>
   <script defer src="site.js"></script>
 </head>
-<body data-page="news">
+<body data-page="article">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header" data-header>
@@ -38,47 +38,13 @@
   </header>
 
   <main id="main-content" class="main-content">
-    <section class="hero hero-news hero--with-support reveal">
-      <div class="site-shell hero__layout">
-        <div class="hero__copy">
-          <p class="eyebrow">News</p>
-          <h1>Editorial guidance for the lineup, the scenes around it, and the weekend that follows.</h1>
-          <p class="hero-lead">
-            The news desk turns the prototype from a visual exercise into a product story that feels current, credible, and easier to navigate.
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#lead-story">Read the lead story</a>
-            <a class="button button--ghost" href="contact.html">Open the visit guide</a>
-          </div>
+    <section class="hero reveal">
+      <div class="site-shell article-shell">
+        <div class="article-card">
+          <nav class="article-breadcrumb" aria-label="Breadcrumb" data-article-breadcrumb></nav>
+          <div data-article-hero></div>
         </div>
-        <div class="hero__art">
-          <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80" alt="Editorial notebook and phone at a live event">
-          <div class="hero__art-card">
-            <strong>Editorial rule</strong>
-            <p>Use explicit demo dates, not vague '2 hours ago' timestamps that make a static prototype look false.</p>
-          </div>
-        </div>
-        <aside class="hero__support">
-          <p class="eyebrow">Topics</p>
-          <h2>Lineup, travel, rising artists, and late-night programming.</h2>
-          <p>The coverage mirrors the product priorities instead of pretending to be a full live newsroom.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section reveal" id="lead-story">
-      <div class="site-shell" data-featured-story></div>
-    </section>
-
-    <section class="section reveal">
-      <div class="site-shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Trending topics</p>
-            <h2 class="section-title">A faster scan of the themes shaping the prototype.</h2>
-          </div>
-        </div>
-        <ul class="topic-list" data-trending-topics></ul>
+        <article class="article-body" data-article-body></article>
       </div>
     </section>
 
@@ -86,31 +52,12 @@
       <div class="site-shell">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Category filters</p>
-            <h2 class="section-title">Filter the grid without losing the editorial stack.</h2>
+            <p class="eyebrow">Related stories</p>
+            <h2 class="section-title">Keep reading the wider PopFusion story.</h2>
           </div>
+          <a class="text-link" href="news.html">Back to news</a>
         </div>
-        <div class="filter-bar" data-news-filters></div>
-        <div class="card-grid card-grid--stories" data-news-grid></div>
-      </div>
-    </section>
-
-    <section class="section reveal">
-      <div class="site-shell">
-        <div class="cta-panel newsletter-panel">
-          <div>
-            <p class="eyebrow">Editorial updates</p>
-            <h2>Get the next story drop in one email.</h2>
-            <p>Use the prototype sign-up to test whether visitors understand the value of editorial updates beyond tickets and lineup reveals.</p>
-          </div>
-          <form class="search-panel" data-newsletter-form>
-            <div class="search-panel__row">
-              <input type="email" name="email" placeholder="Email address" aria-label="Email address for editorial updates" required>
-              <button class="button button--primary" type="submit">Join updates</button>
-            </div>
-            <p class="form-feedback" aria-live="polite"></p>
-          </form>
-        </div>
+        <div class="card-grid card-grid--stories" data-article-related></div>
       </div>
     </section>
   </main>
@@ -119,7 +66,7 @@
     <div class="site-shell site-footer__panel">
       <div class="site-footer__brand">
         <img src="assets/brand/popfusion-logo.png" alt="PopFusion">
-        <p>The editorial layer gives the product credibility by explaining why each lineup, chart, and planning element matters.</p>
+        <p>This article template gives every story a working detail page and a clear route back into the rest of the site.</p>
       </div>
       <div class="footer-links">
         <section>

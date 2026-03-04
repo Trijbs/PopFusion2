@@ -1,409 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Connect with the PopFusion 2025 community. Get support, share feedback, or join our music community.">
-    <meta name="keywords" content="PopFusion 2025, community contact, music support, feedback, connect">
-    <meta property="og:title" content="PopFusion 2025 - Connect with Our Community">
-    <meta property="og:description" content="Join our music community and get the support you need. Connect with fellow music lovers.">
-    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#6366f1">
-    <title>PopFusion 2025 - Connect with Community</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.min.css">
-    <link rel="stylesheet" href="styles-2025.css">
-    <script defer src="config.js"></script>
-    <script defer src="data.js"></script>
-    <script defer src="contact-fetch.js"></script>
-    <script defer src="contact-interactions.js"></script>
-    <script defer src="analytics.js"></script>
-    <script defer src="modern-interactions.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan your PopFusion visit with travel guidance, essentials, accessibility information, and support contact details.">
+  <meta name="theme-color" content="#0c0b10">
+  <title>PopFusion - Plan Visit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body class="dark-mode modern-2025">
-    <!-- Floating Particles -->
-    <div class="floating-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+<body data-page="visit">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-shell site-header__inner">
+      <a class="brand" href="index.html" aria-label="PopFusion home">
+        <img src="assets/brand/popfusion-logo.png" alt="PopFusion">
+        <span class="brand__copy">
+          <strong>PopFusion</strong>
+          <span>Festival energy, discovery-driven listening.</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav class="site-nav" id="site-nav" data-nav-panel data-open="false" aria-label="Primary">
+        <a class="site-nav__link" href="index.html" data-nav-link="home">Home</a>
+        <a class="site-nav__link" href="discover.html" data-nav-link="discover">Discover</a>
+        <a class="site-nav__link" href="billboard.html" data-nav-link="charts">Charts</a>
+        <a class="site-nav__link" href="artist.html" data-nav-link="artist">Artists</a>
+        <a class="site-nav__link" href="news.html" data-nav-link="news">News</a>
+        <a class="site-nav__link" href="contact.html" data-nav-link="visit">Plan Visit</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Ambient Background Effects -->
-    <div class="ambient-bg">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-        <div class="noise-overlay"></div>
+  <main id="main-content" class="main-content">
+    <section class="hero hero-visit hero--with-support reveal">
+      <div class="site-shell hero__layout">
+        <div class="hero__copy">
+          <p class="eyebrow">Plan visit</p>
+          <h1>Practical festival information should feel as polished as the lineup.</h1>
+          <p class="hero-lead">
+            The visit guide turns PopFusion into a credible event companion: travel choices, essential packing notes, accessibility planning, and one compact support route.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#travel">Open travel guide</a>
+            <a class="button button--ghost" href="#visit-form">Contact support</a>
+          </div>
+        </div>
+        <div class="hero__art">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80" alt="Festival site at dusk with illuminated walkways">
+          <div class="hero__art-card">
+            <strong>Visitor-first</strong>
+            <p>Travel, accessibility, and support are now part of the main product, not buried in generic contact copy.</p>
+          </div>
+        </div>
+        <aside class="hero__support">
+          <p class="eyebrow">Prototype focus</p>
+          <h2>Summer 2026 planning flow.</h2>
+          <p>Venue notes, essentials, and the app concept are grouped around what visitors need before arrival.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reveal" id="travel">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Venue and travel</p>
+            <h2 class="section-title">Choose the route that protects your energy before the first set.</h2>
+          </div>
+        </div>
+        <div class="info-grid info-grid--three" data-visit-travel></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="essentials">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Practical essentials</p>
+            <h2 class="section-title">A better weekend usually starts with smaller planning choices.</h2>
+          </div>
+        </div>
+        <div class="info-grid info-grid--three" data-visit-essentials></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="accessibility">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Accessibility</p>
+            <h2 class="section-title">Support information belongs in the main flow, not as an afterthought.</h2>
+          </div>
+        </div>
+        <div class="info-grid info-grid--three" data-visit-accessibility></div>
+        <div class="newsletter-panel" data-visit-support></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="faq">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2 class="section-title">Answer the obvious questions before visitors need to ask them.</h2>
+          </div>
+        </div>
+        <div class="faq-list" data-faq-list></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="visit-form">
+      <div class="site-shell">
+        <div class="cta-panel">
+          <div>
+            <p class="eyebrow">Support form</p>
+            <h2>Send a visit or accessibility question.</h2>
+            <p>Keep the form compact, clear, and useful for actual pre-visit planning.</p>
+          </div>
+          <form class="field-grid" data-support-form novalidate>
+            <div class="field-grid">
+              <div class="field">
+                <label for="visit-name">Name</label>
+                <input id="visit-name" name="name" type="text" required>
+                <small>Use the name connected to your question or visit plan.</small>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="visit-email">Email</label>
+                <input id="visit-email" name="email" type="email" required>
+                <small>We use this only to respond to the prototype request.</small>
+                <span class="field-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="visit-topic">Topic</label>
+              <select id="visit-topic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option value="travel">Travel planning</option>
+                <option value="accessibility">Accessibility support</option>
+                <option value="app">App concept</option>
+                <option value="general">General question</option>
+              </select>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="visit-message">Message</label>
+              <textarea id="visit-message" name="message" required></textarea>
+              <small>Include the part of the visit flow you want help with.</small>
+              <span class="field-error" aria-live="polite"></span>
+            </div>
+            <div class="button-row">
+              <button class="button button--primary" type="submit">Send question</button>
+            </div>
+            <p class="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="site-shell" data-visit-app></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell site-footer__panel">
+      <div class="site-footer__brand">
+        <img src="assets/brand/popfusion-logo.png" alt="PopFusion">
+        <p>The visit guide now acts as the operational layer of the product, with travel, accessibility, and support grouped together.</p>
+      </div>
+      <div class="footer-links">
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="discover.html">New this week</a></li>
+            <li><a href="billboard.html">Chart highlights</a></li>
+            <li><a href="artist.html">Artist stories</a></li>
+            <li><a href="news.html">Editorial desk</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Festival</h3>
+          <ul>
+            <li><a href="contact.html#travel">Travel guide</a></li>
+            <li><a href="contact.html#essentials">Weekend essentials</a></li>
+            <li><a href="contact.html#accessibility">Accessibility</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>More</h3>
+          <ul>
+            <li><a href="spotify.html">Spotify playlists</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-meta">
+        <span>Prototype edition / Summer 2026</span>
+        <span>&copy; <span data-current-year></span> PopFusion</span>
+      </div>
     </div>
-
-    <!-- Glassmorphism Header -->
-    <header class="glass-header">
-        <div class="header-container">
-            <div class="logo-section">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" class="logo-svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#6366f1"/>
-                                <stop offset="50%" style="stop-color:#8b5cf6"/>
-                                <stop offset="100%" style="stop-color:#ec4899"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
-                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
-                    </svg>
-                </div>
-                <span class="logo-text">PopFusion</span>
-                <span class="logo-year">2025</span>
-            </div>
-            <nav class="header-nav">
-                <div class="menu">
-                    <button class="close-button" aria-label="Close menu">✕</button>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="billboard.html">Top 100</a></li>
-                        <li><a href="spotify.html">Spotify Playlists</a></li>
-                        <li><a href="discover.html">Discover</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="discover-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-icon">🤝</span>
-                        <span>Community Connect</span>
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <span class="title-line">Connect with</span>
-                        <span class="title-line gradient-text">Our Community</span>
-                    </h1>
-                    
-                    <p class="hero-description">
-                        Join thousands of music lovers, get support, share feedback, or collaborate with fellow enthusiasts in our vibrant community.
-                    </p>
-                    
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Community Support</div>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">&lt;2h</div>
-                            <div class="stat-label">Response Time</div>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">98%</div>
-                            <div class="stat-label">Satisfaction Rate</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Methods Section -->
-        <section class="contact-methods">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span>💬</span>
-                        <span>Get in Touch</span>
-                    </div>
-                    <h2 class="section-title">How Can We Help?</h2>
-                </div>
-
-                <div class="methods-grid">
-                    <div class="method-card">
-                        <div class="method-icon">💬</div>
-                        <h3 class="method-title">Live Chat</h3>
-                        <p class="method-description">Get instant help from our community moderators and support team.</p>
-                        <div class="method-status online">
-                            <span class="status-dot"></span>
-                            <span>Online Now</span>
-                        </div>
-                        <button class="primary-btn">Start Chat</button>
-                    </div>
-                    
-                    <div class="method-card">
-                        <div class="method-icon">📧</div>
-                        <h3 class="method-title">Email Support</h3>
-                        <p class="method-description">Send us detailed questions, feedback, or technical issues.</p>
-                        <div class="method-status">
-                            <span class="response-time">Response within 2 hours</span>
-                        </div>
-                        <button class="secondary-btn">Send Email</button>
-                    </div>
-                    
-                    <div class="method-card">
-                        <div class="method-icon">👥</div>
-                        <h3 class="method-title">Community Forum</h3>
-                        <p class="method-description">Connect with other music enthusiasts and share experiences.</p>
-                        <div class="method-status">
-                            <span class="community-count">15.2K active members</span>
-                        </div>
-                        <button class="secondary-btn">Join Forum</button>
-                    </div>
-                    
-                    <div class="method-card">
-                        <div class="method-icon">🎵</div>
-                        <h3 class="method-title">Artist Connect</h3>
-                        <p class="method-description">Direct line to featured artists for collaborations.</p>
-                        <div class="method-status">
-                            <span class="artist-count">500+ artists available</span>
-                        </div>
-                        <button class="secondary-btn">Connect</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="contact-form-section">
-            <div class="container">
-                <div class="form-container">
-                    <div class="form-header">
-                        <h2 class="form-title">Send Us a Message</h2>
-                        <p class="form-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-                    </div>
-                    
-                    <form class="modern-contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" id="firstName" name="firstName" class="form-input" required>
-                                <div class="form-focus-line"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" class="form-input" required>
-                                <div class="form-focus-line"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
-                            <div class="form-focus-line"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <select id="subject" name="subject" class="form-select" required>
-                                <option value="">Choose a topic</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="technical">Technical Support</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="artist">Artist Collaboration</option>
-                                <option value="community">Community Issues</option>
-                                <option value="business">Business Partnership</option>
-                            </select>
-                            <div class="form-focus-line"></div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Tell us how we can help you..."></textarea>
-                            <div class="form-focus-line"></div>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
-                                <span class="checkbox-custom"></span>
-                                <span class="checkbox-text">Subscribe to our newsletter for music updates and community news</span>
-                            </label>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="primary-btn form-submit">
-                                <span>Send Message</span>
-                                <span class="btn-icon">→</span>
-                            </button>
-                            <button type="reset" class="tertiary-btn">Clear Form</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span>❓</span>
-                        <span>Frequently Asked</span>
-                    </div>
-                    <h2 class="section-title">Common Questions</h2>
-                </div>
-
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How do I create a playlist?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Creating playlists is easy! Simply navigate to your profile, click "Create Playlist", and start adding your favorite tracks. You can make them public or private.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How does the AI recommendation work?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Our AI analyzes your listening patterns, favorite genres, and musical preferences to suggest new tracks and artists that match your taste. The more you use PopFusion, the better it gets!</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Can I connect with artists directly?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Yes! Many artists on PopFusion have enabled direct messaging. Look for the "Connect" button on their profile to send them a message or collaboration request.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Is PopFusion free to use?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>PopFusion offers both free and premium tiers. The free version includes basic features, while premium unlocks advanced AI recommendations, unlimited playlists, and exclusive content.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How do I report inappropriate content?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>You can report any inappropriate content by clicking the three dots menu next to any post, comment, or track, and selecting "Report". Our moderation team reviews all reports within 24 hours.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Can I upload my own music?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Absolutely! Artists can upload their original music through our Artist Portal. We support various formats and provide analytics to help you understand your audience.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Modern Footer -->
-    <footer class="modern-footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <svg viewBox="0 0 40 40" class="logo-svg">
-                            <defs>
-                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#6366f1"/>
-                                    <stop offset="50%" style="stop-color:#8b5cf6"/>
-                                    <stop offset="100%" style="stop-color:#ec4899"/>
-                                </linearGradient>
-                            </defs>
-                            <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
-                            <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
-                        </svg>
-                        <span class="footer-logo-text">PopFusion 2025</span>
-                    </div>
-                    <p class="footer-tagline">Unite Your Music Journey, Discover the Beat</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Spotify">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Discover</h4>
-                        <ul>
-                            <li><a href="billboard.html">Top Charts</a></li>
-                            <li><a href="artist.html">New Artists</a></li>
-                            <li><a href="discover.html">AI Recommendations</a></li>
-                            <li><a href="#">Playlists</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Community</h4>
-                        <ul>
-                            <li><a href="#">Music Reviews</a></li>
-                            <li><a href="#">Artist Interviews</a></li>
-                            <li><a href="#">User Playlists</a></li>
-                            <li><a href="#">Forums</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Tools</h4>
-                        <ul>
-                            <li><a href="#">Music Player</a></li>
-                            <li><a href="#">Playlist Creator</a></li>
-                            <li><a href="#">Song Recognition</a></li>
-                            <li><a href="#">API Access</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Support</h4>
-                        <ul>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-copyright">
-                    © 2025 PopFusion. All rights reserved.
-                </div>
-                <div class="footer-meta">
-                    <span>Made with ❤️ for music lovers</span>
-                    <span class="separator">•</span>
-                    <span>v2.0.1</span>
-                </div>
-            </div>
-        </div>
-    </footer>
+  </footer>
 </body>
 </html>

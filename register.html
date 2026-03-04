@@ -1,81 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopFusion - Register</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="data.js"></script>
-    <script src="search.js"></script>
-    <script src="menu.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a demo account for the PopFusion prototype.">
+  <meta name="theme-color" content="#0c0b10">
+  <title>PopFusion - Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body>
-    <header>
-        <div class="logo">PopFusion</div>
-        <div class="tagline">Discover, Stream, and Share</div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for artists, songs, albums...">
-            <button class="search-button">Search</button>
-        </div>
-        <nav>
-            <button class="menu-toggle">☰</button>
-            <div class="auth-buttons">
-                <button class="sign-in"><a href="login.html">Sign In</a></button>
-                <button class="register"><a href="register.html">Register</a></button>
-            </div>
-            <div class="menu">
-                <button class="close-button">✕</button>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pop.html">Pop</a></li>
-                    <li><a href="hip-hop.html">Hip-Hop</a></li>
-                    <li><a href="rock.html">Rock</a></li>
-                    <li><a href="electronic.html">Electronic</a></li>
-                    <li><a href="billboard.html">Top 100</a></li>
-                    <li><a href="spotify.html">Spotify Playlists</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="register-container">
-            <h2>Register</h2>
-            <form class="register-form">
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit" class="register-button">Register</button>
-                <p>Already have an account? <a href="login.html">Sign In</a></p>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="slogan">The Ultimate Music Experience</div>
-            <p>© 2025 PopFusion. All rights reserved.</p>
-            <div class="social-media">
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://twitter.com">Twitter</a>
-                <a href="https://instagram.com">Instagram</a>
-            </div>
-        </div>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="help.html">Help</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <div class="footer-bottom">
-            <p>Powered by PopFusion</p>
-            <p>Version 1.0.0</p>
-        </div>
-        <div class="footer-credits">
-            <p>Designed by Ruben</p>
-        </div>
-    </footer>
+<body data-page="utility">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" data-header><div class="site-shell site-header__inner"><a class="brand" href="index.html" aria-label="PopFusion home"><img src="assets/brand/popfusion-logo.png" alt="PopFusion"><span class="brand__copy"><strong>PopFusion</strong><span>Festival energy, discovery-driven listening.</span></span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button><nav class="site-nav" id="site-nav" data-nav-panel data-open="false" aria-label="Primary"><a class="site-nav__link" href="index.html" data-nav-link="home">Home</a><a class="site-nav__link" href="discover.html" data-nav-link="discover">Discover</a><a class="site-nav__link" href="billboard.html" data-nav-link="charts">Charts</a><a class="site-nav__link" href="artist.html" data-nav-link="artist">Artists</a><a class="site-nav__link" href="news.html" data-nav-link="news">News</a><a class="site-nav__link" href="contact.html" data-nav-link="visit">Plan Visit</a></nav></div></header>
+  <main id="main-content" class="main-content">
+    <section class="hero reveal"><div class="site-shell hero__layout"><div class="hero__copy"><p class="eyebrow">Register</p><h1>Create a local demo account for the PopFusion prototype.</h1><p class="hero-lead">Registration here is only for browser-level testing of repeat visits and lightweight account flows. No real backend account is created.</p></div><div class="hero__support"><p class="eyebrow">What changes</p><div class="compact-stack"><div class="notice-strip">Sign-in can be tested locally after registration.</div><div class="notice-strip">The product can support repeat-visit UX checks.</div><div class="notice-strip">No payment or live user system is implied.</div></div></div></div></section>
+    <section class="section reveal"><div class="site-shell"><div class="cta-panel"><div><p class="eyebrow">Demo account</p><h2>Register with a name, email, and password.</h2><p>Use a memorable email so you can test the sign-in flow right after.</p></div><form class="field-grid" data-auth-form data-auth-mode="register" novalidate><div class="field"><label for="register-name">Name</label><input id="register-name" name="name" type="text" autocomplete="name" required><span class="field-error" aria-live="polite"></span></div><div class="field"><label for="register-email">Email</label><input id="register-email" name="email" type="email" autocomplete="email" required><span class="field-error" aria-live="polite"></span></div><div class="field"><label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" required><small>Any password works for the prototype, but use something memorable for testing.</small><span class="field-error" aria-live="polite"></span></div><div class="button-row"><button class="button button--primary" type="submit">Create account</button><a class="button button--ghost" href="login.html">Already have one</a></div><p class="form-feedback" aria-live="polite"></p></form></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="site-shell site-footer__panel"><div class="site-footer__brand"><img src="assets/brand/popfusion-logo.png" alt="PopFusion"><p>Registration is framed as prototype testing support, not as a full product promise.</p></div><div class="footer-links"><section><h3>Explore</h3><ul><li><a href="discover.html">New this week</a></li><li><a href="billboard.html">Chart highlights</a></li><li><a href="artist.html">Artist stories</a></li><li><a href="news.html">Editorial desk</a></li></ul></section><section><h3>Festival</h3><ul><li><a href="contact.html#travel">Travel guide</a></li><li><a href="contact.html#essentials">Weekend essentials</a></li><li><a href="contact.html#accessibility">Accessibility</a></li><li><a href="contact.html#faq">FAQ</a></li></ul></section><section><h3>More</h3><ul><li><a href="spotify.html">Spotify playlists</a></li><li><a href="help.html">Help</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul></section></div><div class="footer-meta"><span>Prototype edition / Summer 2026</span><span>&copy; <span data-current-year></span> PopFusion</span></div></div></footer>
 </body>
 </html>

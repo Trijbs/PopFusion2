@@ -1,605 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PopFusion 2025: Unite Your Music Journey. Join the ultimate music community with AI-powered discovery, social playlists, and immersive experiences.">
-    <meta name="keywords" content="music community, AI playlists, social music, PopFusion 2025, music discovery, collaborative playlists">
-    <meta property="og:title" content="PopFusion 2025 - Unite Your Music Journey">
-    <meta property="og:description" content="Join the future of music community. Discover, share, and connect through AI-powered music experiences.">
-    <meta property="og:image" content="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg">
-    <title>PopFusion 2025 - Unite Your Music Journey</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.min.css">
-    
-    <!-- Scripts -->
-    <script defer src="data.js"></script>
-    <script defer src="analytics.js"></script>
-    <script defer src="modern-interactions.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PopFusion is a hybrid music-discovery and festival concept for Summer 2026, bringing lineup highlights, artist stories, and practical visit planning together in one experience.">
+  <meta name="theme-color" content="#0c0b10">
+  <meta property="og:title" content="PopFusion - Festival Energy, Discovery-Driven Listening">
+  <meta property="og:description" content="Explore the lineup, track new artists, and plan a smoother PopFusion weekend.">
+  <meta property="og:type" content="website">
+  <title>PopFusion - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="site.js"></script>
 </head>
-<body class="dark-mode modern-2025">
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <svg class="loading-svg" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="45" stroke="url(#loadingGradient)" stroke-width="8" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="75"/>
-                    <defs>
-                        <linearGradient id="loadingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#6366f1"/>
-                            <stop offset="50%" style="stop-color:#8b5cf6"/>
-                            <stop offset="100%" style="stop-color:#ec4899"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-            <div class="loading-text">PopFusion</div>
-            <div class="loading-subtitle">Unite Your Music Journey</div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-shell site-header__inner">
+      <a class="brand" href="index.html" aria-label="PopFusion home">
+        <img src="assets/brand/popfusion-logo.png" alt="PopFusion">
+        <span class="brand__copy">
+          <strong>PopFusion</strong>
+          <span>Festival energy, discovery-driven listening.</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav-panel data-open="false" aria-label="Primary">
+        <a class="site-nav__link" href="index.html" data-nav-link="home">Home</a>
+        <a class="site-nav__link" href="discover.html" data-nav-link="discover">Discover</a>
+        <a class="site-nav__link" href="billboard.html" data-nav-link="charts">Charts</a>
+        <a class="site-nav__link" href="artist.html" data-nav-link="artist">Artists</a>
+        <a class="site-nav__link" href="news.html" data-nav-link="news">News</a>
+        <a class="site-nav__link" href="contact.html" data-nav-link="visit">Plan Visit</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Floating Particles -->
-    <div class="floating-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+  <main id="main-content" class="main-content">
+    <section class="hero hero-home hero--with-support reveal">
+      <div class="site-shell hero__layout">
+        <div class="hero__copy">
+          <p class="eyebrow">Summer 2026 / hybrid music guide</p>
+          <h1>Find the artists, the rhythm, and the route through the weekend.</h1>
+          <p class="hero-lead">
+            PopFusion combines festival planning with music discovery so visitors can move from lineup curiosity to a clear weekend plan without getting lost in noise.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#lineup">Explore line-up</a>
+            <a class="button button--secondary" href="contact.html">Plan your visit</a>
+          </div>
+
+          <form class="search-panel" data-search-form>
+            <div class="search-panel__row">
+              <input type="search" name="query" placeholder="Search artists, genres, or articles" aria-label="Search artists, genres, or articles">
+              <button class="button button--ghost" type="submit">Quick search</button>
+            </div>
+            <p class="search-feedback" data-search-feedback>
+              Search artists, genres, or articles to get a quick route through the site.
+            </p>
+          </form>
+
+          <div class="hero-signals" data-festival-facts></div>
+        </div>
+
+        <div class="hero__art">
+          <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80" alt="Festival crowd under magenta and cyan stage lighting">
+          <div class="hero__art-card">
+            <strong>What is happening soon?</strong>
+            <p>First-wave lineup highlights, artist stories, and the practical visit guide are ready for the Summer 2026 prototype.</p>
+          </div>
+        </div>
+
+        <aside class="hero__support">
+          <p class="eyebrow">Why this works</p>
+          <h2>One homepage, three answers.</h2>
+          <p>What PopFusion is. What is coming up. Where to go next.</p>
+          <div class="button-row">
+            <a class="button button--ghost" href="news.html">Read updates</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reveal" id="lineup">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Line-up highlights</p>
+            <h2 class="section-title">The first wave is built around stage identity, not clutter.</h2>
+          </div>
+          <a class="text-link" href="artist.html">Go to artist profiles</a>
+        </div>
+        <div class="card-grid card-grid--lineup" data-lineup-grid></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Genre lanes</p>
+            <h2 class="section-title">Discovery stays focused around the four genres from the research.</h2>
+          </div>
+          <a class="text-link" href="discover.html">Open discover</a>
+        </div>
+        <div class="info-grid info-grid--three" data-genre-lanes></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest news</p>
+            <h2 class="section-title">Editorial context for the lineup, the visitor flow, and the rising names.</h2>
+          </div>
+          <a class="text-link" href="news.html">Visit the news desk</a>
+        </div>
+        <div class="card-grid card-grid--stories" data-home-news></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Plan your weekend</p>
+            <h2 class="section-title">Small practical decisions make the whole event easier.</h2>
+          </div>
+          <a class="text-link" href="contact.html">Open visit guide</a>
+        </div>
+        <div class="info-grid info-grid--three" data-weekend-plans></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured artists</p>
+            <h2 class="section-title">Prototype profiles with tracks, live context, and related coverage.</h2>
+          </div>
+          <a class="text-link" href="artist.html">All artist stories</a>
+        </div>
+        <div class="card-grid card-grid--artists" data-featured-artists></div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="site-shell">
+        <div class="cta-panel newsletter-panel">
+          <div>
+            <p class="eyebrow">Tickets and updates</p>
+            <h2>Stay close to the next release drop.</h2>
+            <p>Use this prototype newsletter sign-up to capture interest in lineup news, travel info, and the PopFusion app concept.</p>
+          </div>
+          <form class="search-panel" data-newsletter-form>
+            <div class="search-panel__row">
+              <input type="email" name="email" placeholder="Email address" aria-label="Email address for updates" required>
+              <button class="button button--primary" type="submit">Join updates</button>
+            </div>
+            <p class="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell site-footer__panel">
+      <div class="site-footer__brand">
+        <img src="assets/brand/popfusion-logo.png" alt="PopFusion">
+        <p>PopFusion is a music-discovery and festival-planning prototype shaped by the attached research, the PopFusion visual identity, and a clearer visitor-first product story.</p>
+        <div class="social-links">
+          <a href="https://instagram.com" rel="noreferrer noopener">Instagram</a>
+          <a href="https://tiktok.com" rel="noreferrer noopener">TikTok</a>
+          <a href="https://open.spotify.com" rel="noreferrer noopener">Spotify</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <section>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="discover.html">New this week</a></li>
+            <li><a href="billboard.html">Chart highlights</a></li>
+            <li><a href="artist.html">Artist stories</a></li>
+            <li><a href="news.html">Editorial desk</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>Festival</h3>
+          <ul>
+            <li><a href="contact.html#travel">Travel guide</a></li>
+            <li><a href="contact.html#essentials">Weekend essentials</a></li>
+            <li><a href="contact.html#accessibility">Accessibility</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>More</h3>
+          <ul>
+            <li><a href="spotify.html">Spotify playlists</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer-meta">
+        <span>Prototype edition / Summer 2026</span>
+        <span>&copy; <span data-current-year></span> PopFusion</span>
+      </div>
     </div>
-
-    <!-- Ambient Background Effects -->
-    <div class="ambient-bg">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-        <div class="noise-overlay"></div>
-    </div>
-
-    <!-- Glassmorphism Header -->
-    <header class="glass-header">
-        <div class="header-container">
-            <div class="logo-section">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" class="logo-svg">
-                        <defs>
-                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#6366f1"/>
-                                <stop offset="50%" style="stop-color:#8b5cf6"/>
-                                <stop offset="100%" style="stop-color:#ec4899"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" opacity="0.8"/>
-                        <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
-                    </svg>
-                </div>
-                <span class="logo-text">PopFusion</span>
-                <span class="logo-year">2025</span>
-            </div>
-            
-            <nav class="header-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">Community</a></li>
-                    <li><a href="discover.html" class="nav-link">Discover</a></li>
-                    <li><a href="billboard.html" class="nav-link">Charts</a></li>
-                    <li><a href="artist.html" class="nav-link">Artists</a></li>
-                    <li><a href="contact.html" class="nav-link">Connect</a></li>
-                </ul>
-                
-                <div class="header-actions">
-                    <button class="search-toggle" aria-label="Search">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="m21 21-4.35-4.35"/>
-                        </svg>
-                    </button>
-                    <button class="profile-btn">
-                        <div class="profile-avatar">
-                            <span>U</span>
-                        </div>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Hero Section - Community Focus -->
-        <section class="hero-community">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-icon">🌟</span>
-                        <span>Music Community Platform</span>
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <span class="title-line">Unite Your</span>
-                        <span class="title-line gradient-text">Music Journey</span>
-                    </h1>
-                    
-                    <p class="hero-description">
-                        Join millions of music lovers in the ultimate community platform. 
-                        Discover new sounds, share your favorites, and connect with artists and fans worldwide.
-                    </p>
-                    
-                    <div class="hero-actions">
-                        <button class="primary-btn glow-effect">
-                            <span class="btn-icon">🎵</span>
-                            <span>Join Community</span>
-                            <div class="btn-ripple"></div>
-                        </button>
-                        <button class="secondary-btn glass-effect">
-                            <span class="btn-icon">🔍</span>
-                            <span>Explore Music</span>
-                        </button>
-                    </div>
-                    
-                    <div class="community-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">2.5M+</div>
-                            <div class="stat-label">Community Members</div>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">50K+</div>
-                            <div class="stat-label">Artists</div>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">1M+</div>
-                            <div class="stat-label">Playlists Shared</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-visual">
-                    <div class="community-showcase">
-                        <div class="showcase-card card-1">
-                            <div class="user-avatar">
-                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=100" alt="User">
-                            </div>
-                            <div class="card-content">
-                                <div class="username">@musiclover</div>
-                                <div class="activity">Shared "Midnight Vibes"</div>
-                            </div>
-                            <div class="activity-icon">🎵</div>
-                        </div>
-                        
-                        <div class="showcase-card card-2">
-                            <div class="user-avatar">
-                                <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?w=100" alt="Artist">
-                            </div>
-                            <div class="card-content">
-                                <div class="username">Luna Eclipse</div>
-                                <div class="activity">New track released</div>
-                            </div>
-                            <div class="activity-icon">🎤</div>
-                        </div>
-                        
-                        <div class="showcase-card card-3">
-                            <div class="user-avatar">
-                                <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?w=100" alt="User">
-                            </div>
-                            <div class="card-content">
-                                <div class="username">@beatdrop</div>
-                                <div class="activity">Started listening party</div>
-                            </div>
-                            <div class="activity-icon">🎉</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Neural Search Section -->
-        <section class="neural-search">
-            <div class="container">
-                <div class="search-container">
-                    <div class="search-wrapper">
-                        <div class="search-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"/>
-                                <path d="m21 21-4.35-4.35"/>
-                            </svg>
-                        </div>
-                        <input type="text" class="search-input" placeholder="Ask AI to find your perfect music community...">
-                        <div class="search-ai-indicator">
-                            <span class="ai-badge">AI</span>
-                        </div>
-                    </div>
-                    <div class="ai-suggestions" style="display: none;"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Community Features Section -->
-        <section class="community-features">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span class="badge-icon">🤝</span>
-                        <span>Community Features</span>
-                    </div>
-                    <h2 class="section-title">Connect Through Music</h2>
-                    <p class="section-description">
-                        Experience music like never before with our community-driven features designed to bring people together.
-                    </p>
-                </div>
-                
-                <div class="features-grid">
-                    <div class="feature-card social-card">
-                        <div class="card-header">
-                            <div class="feature-icon gradient-bg">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                            </div>
-                            <h3>Social Playlists</h3>
-                        </div>
-                        <p>Create collaborative playlists with friends, discover what your community is listening to, and share your musical taste.</p>
-                        <div class="feature-demo">
-                            <div class="demo-users">
-                                <div class="demo-avatar">👤</div>
-                                <div class="demo-avatar">👤</div>
-                                <div class="demo-avatar">👤</div>
-                                <span class="demo-count">+12</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="feature-card live-card">
-                        <div class="card-header">
-                            <div class="feature-icon gradient-bg">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M12 1v6m0 6v6"/>
-                                    <path d="m21 12-6-6-6 6-6-6"/>
-                                </svg>
-                            </div>
-                            <h3>Live Sessions</h3>
-                        </div>
-                        <p>Join live listening parties, attend virtual concerts, and experience music together in real-time with the community.</p>
-                        <div class="feature-demo">
-                            <div class="live-indicator">
-                                <span class="live-dot"></span>
-                                <span>Live Now</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="feature-card ai-card">
-                        <div class="card-header">
-                            <div class="feature-icon gradient-bg">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 12l2 2 4-4"/>
-                                    <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
-                                    <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
-                                </svg>
-                            </div>
-                            <h3>AI Recommendations</h3>
-                        </div>
-                        <p>Get personalized music suggestions based on your community interactions, listening habits, and social connections.</p>
-                        <div class="feature-demo">
-                            <div class="ai-brain">
-                                <div class="brain-node"></div>
-                                <div class="brain-node"></div>
-                                <div class="brain-node"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trending in Community -->
-        <section class="trending-community">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Trending in Community</h2>
-                    <div class="trending-filters">
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="playlists">Playlists</button>
-                        <button class="filter-btn" data-filter="artists">Artists</button>
-                        <button class="filter-btn" data-filter="discussions">Discussions</button>
-                    </div>
-                </div>
-                
-                <div class="trending-grid">
-                    <div class="trending-card playlist-card">
-                        <div class="card-image">
-                            <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg" alt="Playlist">
-                            <div class="play-button">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                            <div class="community-badge">Community Favorite</div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="track-title">Midnight Vibes</h3>
-                            <p class="track-artist">Curated by @musiclover</p>
-                            <div class="community-stats">
-                                <span class="stat">❤️ 2.3K</span>
-                                <span class="stat">🔄 856</span>
-                                <span class="stat">💬 124</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="trending-card artist-card">
-                        <div class="card-image">
-                            <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" alt="Artist">
-                            <div class="play-button">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                            <div class="live-badge">Live Now</div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="track-title">Luna Eclipse</h3>
-                            <p class="track-artist">Electronic • Rising Star</p>
-                            <div class="community-stats">
-                                <span class="stat">👥 45K followers</span>
-                                <span class="stat">🎵 12 tracks</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="trending-card discussion-card">
-                        <div class="card-image">
-                            <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg" alt="Discussion">
-                            <div class="discussion-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="track-title">Best Albums of 2025?</h3>
-                            <p class="track-artist">Started by @beatdrop</p>
-                            <div class="community-stats">
-                                <span class="stat">💬 89 replies</span>
-                                <span class="stat">👀 1.2K views</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="trending-card event-card">
-                        <div class="card-image">
-                            <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg" alt="Event">
-                            <div class="event-date">
-                                <span class="date-day">15</span>
-                                <span class="date-month">DEC</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="track-title">Virtual Concert Night</h3>
-                            <p class="track-artist">Community Event</p>
-                            <div class="community-stats">
-                                <span class="stat">🎫 2.1K attending</span>
-                                <span class="stat">⏰ 8 PM EST</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Community Highlights -->
-        <section class="community-highlights">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Community Highlights</h2>
-                    <p class="section-description">See what's happening in the PopFusion community</p>
-                </div>
-                
-                <div class="highlights-grid">
-                    <div class="highlight-card">
-                        <div class="highlight-header">
-                            <div class="user-info">
-                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=50" alt="User" class="user-avatar">
-                                <div class="user-details">
-                                    <span class="username">@musiclover</span>
-                                    <span class="timestamp">2 hours ago</span>
-                                </div>
-                            </div>
-                            <div class="highlight-type">Playlist</div>
-                        </div>
-                        <div class="highlight-content">
-                            <p>"Just created the perfect study playlist! 🎧 Mix of lo-fi, ambient, and some hidden gems. Perfect for late night coding sessions."</p>
-                            <div class="highlight-media">
-                                <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?w=300" alt="Playlist cover">
-                            </div>
-                        </div>
-                        <div class="highlight-actions">
-                            <button class="action-btn">❤️ 234</button>
-                            <button class="action-btn">🔄 56</button>
-                            <button class="action-btn">💬 12</button>
-                            <button class="action-btn">🎵 Play</button>
-                        </div>
-                    </div>
-
-                    <div class="highlight-card">
-                        <div class="highlight-header">
-                            <div class="user-info">
-                                <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?w=50" alt="Artist" class="user-avatar">
-                                <div class="user-details">
-                                    <span class="username">Luna Eclipse</span>
-                                    <span class="timestamp">5 hours ago</span>
-                                </div>
-                            </div>
-                            <div class="highlight-type artist">Artist</div>
-                        </div>
-                        <div class="highlight-content">
-                            <p>"Thank you for 50K followers! 🌙✨ Working on something special for you all. Here's a sneak peek of my upcoming track..."</p>
-                            <div class="highlight-media audio">
-                                <div class="audio-player">
-                                    <button class="play-btn">▶️</button>
-                                    <div class="audio-info">
-                                        <span class="track-name">Neon Dreams (Preview)</span>
-                                        <div class="waveform">
-                                            <div class="wave-bar"></div>
-                                            <div class="wave-bar"></div>
-                                            <div class="wave-bar"></div>
-                                            <div class="wave-bar"></div>
-                                            <div class="wave-bar"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="highlight-actions">
-                            <button class="action-btn">❤️ 1.2K</button>
-                            <button class="action-btn">🔄 234</button>
-                            <button class="action-btn">💬 89</button>
-                            <button class="action-btn">🎵 Save</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Join Community CTA -->
-        <section class="join-community">
-            <div class="container">
-                <div class="cta-content">
-                    <div class="cta-text">
-                        <h2>Ready to Join the Music Revolution?</h2>
-                        <p>Connect with millions of music lovers, discover new artists, and be part of the future of music community.</p>
-                    </div>
-                    <div class="cta-actions">
-                        <button class="primary-btn glow-effect">
-                            <span class="btn-icon">🚀</span>
-                            <span>Join Now - It's Free</span>
-                        </button>
-                        <button class="secondary-btn glass-effect">
-                            <span class="btn-icon">📱</span>
-                            <span>Download App</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="modern-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo-section">
-                        <div class="logo-icon">
-                            <svg viewBox="0 0 40 40" class="logo-svg">
-                                <defs>
-                                    <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#6366f1"/>
-                                        <stop offset="50%" style="stop-color:#8b5cf6"/>
-                                        <stop offset="100%" style="stop-color:#ec4899"/>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="20" cy="20" r="18" fill="url(#footerLogoGradient)" opacity="0.8"/>
-                                <path d="M15 12 L25 20 L15 28 Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <span class="logo-text">PopFusion</span>
-                        <span class="logo-year">2025</span>
-                    </div>
-                    <p class="brand-description">Unite Your Music Journey</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Community</h4>
-                        <ul>
-                            <li><a href="discover.html">Discover</a></li>
-                            <li><a href="billboard.html">Charts</a></li>
-                            <li><a href="artist.html">Artists</a></li>
-                            <li><a href="social.html">Social</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Features</h4>
-                        <ul>
-                            <li><a href="spotify.html">Playlists</a></li>
-                            <li><a href="electronic.html">Genres</a></li>
-                            <li><a href="latest-news.html">News</a></li>
-                            <li><a href="help.html">Help</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="privacy.html">Privacy</a></li>
-                            <li><a href="terms.html">Terms</a></li>
-                            <li><a href="subscribe.html">Newsletter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 PopFusion. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.017.001z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating Action Button -->
-    <div class="fab-container">
-        <div class="fab-main">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-            </svg>
-        </div>
-        <div class="fab-items">
-            <div class="fab-item" data-action="play">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-            </div>
-            <div class="fab-item" data-action="search">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-                </svg>
-            </div>
-            <div class="fab-item" data-action="share">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.50-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-                </svg>
-            </div>
-        </div>
-    </div>
+  </footer>
 </body>
 </html>
